@@ -1,6 +1,6 @@
 
 EXPECTED_BAKE_TIME = 40
-
+PREPARATION_TIME = 2
 
 def bake_time_remaining(elpased_bake_time):
     """Calculate the bake time remaining.
@@ -17,5 +17,20 @@ def bake_time_remaining(elpased_bake_time):
     """
 
     return int(EXPECTED_BAKE_TIME - elpased_bake_time)
+
+def preparation_time_in_minutes(number_of_layers):
+    """Calculate the prepration time for each layer.
+    
+    Parameters:
+        number_of_layers (int): The number of layers in the lasagna.
+    
+    Returns:
+        int: The total prepration time based on the number of the layers and prepration time.
+
+    This function takes in a single integer that is the number of layers if lasagna
+    and returns the prepration time for each layer that is (prepration_time_per_layer * no of layers)
+    """
+    return PREPARATION_TIME * number_of_layers
+
 
 
