@@ -46,8 +46,6 @@ def lose(power_pellet_active, touching_ghost):
 
     return not(power_pellet_active) and touching_ghost
 
-print(lose(False,True))
-
 
 def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
     """Trigger the victory event when all dots have been eaten.
@@ -61,4 +59,5 @@ def win(has_eaten_all_dots, power_pellet_active, touching_ghost):
         bool: Has the player won the game?
     """
 
-    pass
+    return has_eaten_all_dots and not(lose(power_pellet_active , touching_ghost))
+
