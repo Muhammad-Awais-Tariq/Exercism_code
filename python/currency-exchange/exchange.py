@@ -106,8 +106,6 @@ def get_number_of_bills(amount, denomination):
 
     return int(amount // denomination)
 
-print(get_number_of_bills(127.5, 5))
-
 
 def get_leftover_of_bills(amount, denomination):
     """Calculate leftover amount after exchanging into bills.
@@ -131,7 +129,7 @@ def get_leftover_of_bills(amount, denomination):
 
     """
 
-    pass
+    return amount % denomination
 
 
 def exchangeable_value(budget, exchange_rate, spread, denomination):
