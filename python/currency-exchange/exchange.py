@@ -27,8 +27,9 @@ def exchange_money(budget, exchange_rate):
     This function calculates and returns the (estimated) value of the exchanged currency.
 
     """
+    
+    return budget / exchange_rate
 
-    pass
 
 
 def get_change(budget, exchanging_value):
