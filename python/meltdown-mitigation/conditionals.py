@@ -80,8 +80,8 @@ def fail_safe(temperature, neutrons_produced_per_second, threshold):
 
     if temp_neuron < (0.90 * threshold):
         return "LOW"
-    elif (threshold - 0) < temp_neuron  < (threshold - 0.10) or (threshold + 0) < temp_neuron  < (threshold + 0.10):
+    elif  (0.90 * threshold) <= temp_neuron <= (1.10 * threshold):
         return "NORMAL"
     else:
-        return "Danger"
+        return "DANGER"
 
