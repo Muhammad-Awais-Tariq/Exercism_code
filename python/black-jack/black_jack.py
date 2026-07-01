@@ -65,7 +65,7 @@ def value_of_ace(card_one, card_two):
     Returns:
         int: Either 1 or 11, which is the value of the upcoming ace card.
     """
-    
+
     if card_one == "A" or card_two == "A":
         return 1
     
@@ -92,7 +92,12 @@ def is_blackjack(card_one, card_two):
         bool: Is the hand is a blackjack (two cards worth 21).
     """
 
-    pass
+    face_cards = ["K" , "Q" , "J"]
+
+    if card_one in face_cards and card_two == "A" or card_one == "A" and card_two in face_cards:
+        return True
+    else:
+        return False
 
 
 def can_split_pairs(card_one, card_two):
