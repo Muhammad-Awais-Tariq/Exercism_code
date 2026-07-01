@@ -92,7 +92,7 @@ def is_blackjack(card_one, card_two):
         bool: Is the hand is a blackjack (two cards worth 21).
     """
 
-    face_cards = ["K" , "Q" , "J"]
+    face_cards = ["K" , "Q" , "J" , "10"]
 
     if card_one in face_cards and card_two == "A" or card_one == "A" and card_two in face_cards:
         return True
