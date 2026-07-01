@@ -128,4 +128,10 @@ def can_double_down(card_one, card_two):
         bool: Can the hand can be doubled down? (i.e. totals 9, 10 or 11 points).
     """
 
-    pass
+    total_required = [9 , 10 ,11]
+    sum_cards = value_of_card(card_one) + value_of_card(card_two)
+
+    if sum_cards in total_required:
+        return True
+    else:
+        return False
