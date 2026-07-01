@@ -18,12 +18,11 @@ def value_of_card(card):
         2.  'A' (ace card) = 1
         3.  '2' - '10' = numerical value.
     """
-
-    if card == "J" or card == "Q" or card == "K":
+    face_cards = "JQK"
+    if card in face_cards:
         return 10
-    elif card == "A":
-        return 1
-    
+    if card == "A":
+        return 1    
     return int(card)
 
 
@@ -44,9 +43,8 @@ def higher_card(card_one, card_two):
 
     if value_of_card(card_one) > value_of_card(card_two):
         return card_one
-    elif value_of_card(card_one) < value_of_card(card_two):
-        return card_two
-    
+    if value_of_card(card_one) < value_of_card(card_two):
+        return card_two    
     return card_one , card_two
 
 
@@ -73,8 +71,8 @@ def value_of_ace(card_one, card_two):
 
     if sum_of_cards + 11 <= 21:
         return 11
-    else:
-        return 1
+    
+    return 1
 
 
 def is_blackjack(card_one, card_two):
@@ -92,12 +90,9 @@ def is_blackjack(card_one, card_two):
         bool: Is the hand is a blackjack (two cards worth 21).
     """
 
-    face_cards = ["K" , "Q" , "J" , "10"]
-
-    if card_one in face_cards and card_two == "A" or card_one == "A" and card_two in face_cards:
+    if value_of_card(card_one) == 10 and card_two == "A" or card_one == "A" and value_of_card(card_two) == 10:
         return True
-    else:
-        return False
+    return False
 
 
 def can_split_pairs(card_one, card_two):
@@ -111,10 +106,7 @@ def can_split_pairs(card_one, card_two):
         bool: Can the hand be split into two pairs? (i.e. cards are of the same value).
     """
 
-    if value_of_card(card_one) == value_of_card(card_two):
-        return True
-    else:
-        return False
+    return value_of_card(card_one) == value_of_card(card_two)
 
 
 def can_double_down(card_one, card_two):
@@ -130,8 +122,6 @@ def can_double_down(card_one, card_two):
 
     total_required = [9 , 10 ,11]
     sum_cards = value_of_card(card_one) + value_of_card(card_two)
+    sum_cards_in_required = sum_cards in total_required
 
-    if sum_cards in total_required:
-        return True
-    else:
-        return False
+    return sum_cards_in_required
