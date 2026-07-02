@@ -22,8 +22,7 @@ def check_sentence_ending(sentence):
     Returns:
         bool: Is the sentence punctuated correctly?
     """
-
-    pass
+    return sentence.endswith(".")
 
 
 def clean_up_spacing(sentence):
