@@ -10,8 +10,7 @@ def capitalize_title(title):
     Returns:
         str: The title string in title case (first letters capitalized).
     """
-
-    pass
+    return title.title()
 
 
 def check_sentence_ending(sentence):
