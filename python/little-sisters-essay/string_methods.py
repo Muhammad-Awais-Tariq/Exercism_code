@@ -34,9 +34,7 @@ def clean_up_spacing(sentence):
     Returns:
         str: A sentence that has been cleaned of leading and trailing space characters.
     """
-
-    pass
-
+    return sentence.strip()
 
 def replace_word_choice(sentence, old_word, new_word):
     """Replace a word in the provided sentence with a new one.
