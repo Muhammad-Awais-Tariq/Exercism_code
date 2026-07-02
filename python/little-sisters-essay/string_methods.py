@@ -47,5 +47,5 @@ def replace_word_choice(sentence, old_word, new_word):
     Returns:
         str: Input sentence with new words in place of old words.
     """
+    return sentence.replace(old_word , new_word)
 
-    pass
