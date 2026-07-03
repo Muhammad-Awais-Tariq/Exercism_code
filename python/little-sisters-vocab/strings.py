@@ -56,8 +56,12 @@ def remove_suffix_ness(word):
         'sad'
 
     """
+    word_without_suffix =  word.removesuffix("ness")
+    letters = list(word_without_suffix)
+    if letters[-1] == "i":
+        letters[-1] = "y"
 
-    pass
+    return "".join(letters)
 
 
 def adjective_to_verb(sentence, index):
