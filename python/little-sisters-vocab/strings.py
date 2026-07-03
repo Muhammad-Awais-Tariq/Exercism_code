@@ -36,7 +36,7 @@ def make_word_groups(vocab_words):
     for i in range(1,len(vocab_words)):
         sentence.append(f"{prefix}{vocab_words[i]}")
 
-    return "::".join(sentence)
+    return " :: ".join(sentence)
 
 
 def remove_suffix_ness(word):
