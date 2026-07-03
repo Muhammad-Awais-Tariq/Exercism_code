@@ -82,5 +82,7 @@ def adjective_to_verb(sentence, index):
         'blacken'
 
     """
+    sentence_split = sentence.split(" ")
+    adjective = sentence_split[index].removesuffix(".")
+    return f"{adjective}en"
 
-    pass
