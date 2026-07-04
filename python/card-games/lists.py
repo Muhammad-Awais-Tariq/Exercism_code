@@ -28,7 +28,7 @@ def concatenate_rounds(rounds_1, rounds_2):
     Returns:
         list:  All rounds played.
     """
-    
+
     rounds_1.extend(rounds_2)
     return rounds_1
 
@@ -43,8 +43,7 @@ def list_contains_round(rounds, number):
         bool: Was the round played?
     """
 
-    pass
-
+    return True if number in rounds else False
 
 def card_average(hand):
     """Calculate and returns the average card value from the list.
