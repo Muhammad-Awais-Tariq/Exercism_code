@@ -55,8 +55,7 @@ def card_average(hand):
         float: The average value of the cards in the hand.
     """
 
-    pass
-
+    return sum(hand) / len(hand)
 
 def approx_average_is_average(hand):
     """Return if the (average of first and last card values) OR ('middle' card) == calculated average.
