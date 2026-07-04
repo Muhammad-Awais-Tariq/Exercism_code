@@ -85,8 +85,23 @@ def average_even_is_average_odd(hand):
     Returns:
         bool: Are the even and odd averages equal?
     """
+    sum_even = 0
+    sum_odd = 0
+    count_even = 0
+    count_odd = 0
 
-    pass
+    for i in range(len(hand)):
+        if i % 2 == 0:
+            count_even += 1
+            sum_even += hand[i]
+        else:
+            count_odd += 1
+            sum_odd += hand[i]
+    
+    average_even = sum_even / count_even
+    average_odd = sum_odd / count_odd
+
+    return True if average_even == average_odd else False
 
 
 def maybe_double_last(hand):
