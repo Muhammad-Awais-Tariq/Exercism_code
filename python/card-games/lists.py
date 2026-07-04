@@ -66,9 +66,15 @@ def approx_average_is_average(hand):
     Returns:
         bool: Does one of the approximate averages equal the `true average`?
     """
+    
+    first_average = (hand[0] + hand[-1]) / 2
+    middle_idx = len(hand) // 2
+    actual_average = card_average(hand)
 
-    pass
-
+    if first_average == actual_average or hand[middle_idx] == actual_average:
+        return True
+    
+    return False
 
 def average_even_is_average_odd(hand):
     """Return if the (average of even indexed card values) == (average of odd indexed card values).
