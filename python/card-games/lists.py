@@ -28,9 +28,9 @@ def concatenate_rounds(rounds_1, rounds_2):
     Returns:
         list:  All rounds played.
     """
-
-    pass
-
+    
+    rounds_1.extend(rounds_2)
+    return rounds_1
 
 def list_contains_round(rounds, number):
     """Check if the list of rounds contains the specified number.
