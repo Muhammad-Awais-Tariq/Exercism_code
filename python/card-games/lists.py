@@ -14,7 +14,8 @@ def get_rounds(number):
         list: The current round number and the two that follow.
     """
 
-    pass
+    rounds = [number , number+1 , number+2]
+    return rounds
 
 
 def concatenate_rounds(rounds_1, rounds_2):
