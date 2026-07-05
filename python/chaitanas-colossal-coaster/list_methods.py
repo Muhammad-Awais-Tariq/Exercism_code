@@ -45,9 +45,8 @@ def add_me_with_my_friends(queue, index, person_name):
     Returns:
         list: The queue updated with new name.
     """
-
-    pass
-
+    queue.insert(index , person_name)
+    return queue
 
 def remove_the_mean_person(queue, person_name):
     """Remove the mean person from the queue by the provided name.
