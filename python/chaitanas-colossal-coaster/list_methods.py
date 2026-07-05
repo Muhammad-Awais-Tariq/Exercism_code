@@ -98,4 +98,3 @@ def sorted_names(queue):
     """
 
     return sorted(queue)
-
