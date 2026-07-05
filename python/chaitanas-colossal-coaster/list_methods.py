@@ -97,4 +97,5 @@ def sorted_names(queue):
         list: A copy of the queue in alphabetical order.
     """
 
-    pass
+    return sorted(queue)
+
