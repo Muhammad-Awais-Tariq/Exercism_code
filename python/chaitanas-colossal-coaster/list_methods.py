@@ -58,9 +58,8 @@ def remove_the_mean_person(queue, person_name):
     Returns:
         list: The queue updated with the mean persons name removed.
     """
-
-    pass
-
+    queue.remove(person_name)
+    return queue
 
 def how_many_namefellows(queue, person_name):
     """Count how many times the provided name appears in the queue.
