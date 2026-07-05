@@ -32,8 +32,7 @@ def find_my_friend(queue, friend_name):
         int: The index at which the friends name was found.
     """
 
-    pass
-
+    return queue.index(friend_name)
 
 def add_me_with_my_friends(queue, index, person_name):
     """Insert the late arrival's name at a specific index of the queue.
