@@ -84,8 +84,8 @@ def remove_the_last_person(queue):
         str: The name that has been removed from the end of the queue.
     """
 
-    pass
-
+    last_person = queue.pop()
+    return last_person
 
 def sorted_names(queue):
     """Sort the names in the queue in alphabetical order and return the result.
