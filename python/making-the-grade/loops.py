@@ -11,7 +11,8 @@ def round_scores(student_scores):
         list[int]: Student scores *rounded* to the nearest integer value.
     """
 
-    pass
+    return [round(x) for x in student_scores]
+
 
 
 def count_failed_students(student_scores):
