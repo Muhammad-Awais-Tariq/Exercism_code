@@ -62,7 +62,7 @@ def letter_grades(highest):
             86 <= "A" <= 100
     """
 
-    failing_cutoff = int(highest * 0.4)
+    failing_cutoff = 40
     step = (highest - failing_cutoff) // 4
     return [failing_cutoff + 1 + step * i for i in range(4)]
 
