@@ -62,7 +62,9 @@ def letter_grades(highest):
             86 <= "A" <= 100
     """
 
-    pass
+    failing_cutoff = int(highest * 0.4)
+    step = (highest - failing_cutoff) // 4
+    return [failing_cutoff + 1 + step * i for i in range(4)]
 
 
 def student_ranking(student_scores, student_names):
