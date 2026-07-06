@@ -24,8 +24,13 @@ def count_failed_students(student_scores):
     Returns:
         int: The count of student scores at or below 40.
     """
+    failed_students = 0
+    for score in student_scores:
+        if not (score > 40):
+            failed_students += 1
+    
+    return failed_students
 
-    pass
 
 
 def above_threshold(student_scores, threshold):
