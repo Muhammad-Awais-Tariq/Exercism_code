@@ -14,7 +14,6 @@ def round_scores(student_scores):
     return [round(x) for x in student_scores]
 
 
-
 def count_failed_students(student_scores):
     """Count the number of failing students out of the group provided.
 
@@ -32,7 +31,6 @@ def count_failed_students(student_scores):
     return failed_students
 
 
-
 def above_threshold(student_scores, threshold):
     """Determine how many of the provided student scores were 'the best' based on the provided threshold.
 
@@ -44,7 +42,7 @@ def above_threshold(student_scores, threshold):
         list[int]: Integer scores that are at or above the "best" threshold.
     """
 
-    pass
+    return [x for x in student_scores if x >= threshold]
 
 
 def letter_grades(highest):
