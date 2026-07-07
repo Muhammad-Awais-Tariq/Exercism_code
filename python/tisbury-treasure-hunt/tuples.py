@@ -61,7 +61,7 @@ def create_record(azara_record, rui_record):
     
     return "not a match"
 
-print(create_record(('Brass Spyglass', '4B'), ('Abandoned Lighthouse', ('4', 'B'), 'Blue')))
+
 def clean_up(combined_record_group):
     """Clean up a combined record group into a multi-line string of single records.
 
@@ -76,5 +76,11 @@ def clean_up(combined_record_group):
         (see HINTS.md for an example).
 
     """
-
-    pass
+    final_string = ""
+    for item in combined_record_group:
+        list_of_tuple = list(item)
+        list_of_tuple.pop(1)
+        item = tuple(list_of_tuple)
+        final_string += f"{item}\n"
+    
+    return final_string
