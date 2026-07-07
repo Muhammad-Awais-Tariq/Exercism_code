@@ -38,7 +38,8 @@ def compare_records(azara_record, rui_record):
         bool: Do the coordinates match?
     """
 
-    pass
+    return True if convert_coordinate(azara_record[1]) == rui_record[1] else False
+
 
 
 def create_record(azara_record, rui_record):
