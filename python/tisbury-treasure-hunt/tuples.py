@@ -24,7 +24,7 @@ def convert_coordinate(coordinate):
         tuple: The string coordinate split into its individual components.
     """
 
-    pass
+    return tuple(coordinate)
 
 
 def compare_records(azara_record, rui_record):
