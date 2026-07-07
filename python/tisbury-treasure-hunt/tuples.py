@@ -53,9 +53,15 @@ def create_record(azara_record, rui_record):
         tuple or str: The combined record (if compatible), or the string "not a match" (if incompatible).
     """
 
-    pass
+    if compare_records(azara_record , rui_record):
+        azara_list = list(azara_record)
+        rui_list = list(rui_record)
+        azara_list.extend(rui_list)
+        return tuple(azara_list)
+    
+    return "not a match"
 
-
+print(create_record(('Brass Spyglass', '4B'), ('Abandoned Lighthouse', ('4', 'B'), 'Blue')))
 def clean_up(combined_record_group):
     """Clean up a combined record group into a multi-line string of single records.
 
