@@ -11,7 +11,7 @@ def get_coordinate(record):
         str: The extracted map coordinate.
     """
 
-    pass
+    return record[1]
 
 
 def convert_coordinate(coordinate):
