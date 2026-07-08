@@ -11,7 +11,14 @@ def create_inventory(items):
         dict: The inventory dictionary.
     """
 
-    pass
+    item_dict = {}
+    for item in items:
+        if item not in item_dict.keys():
+            item_dict[item] = 1
+        else:
+            item_dict[item] +=1
+
+    return item_dict
 
 
 def add_items(inventory, items):
