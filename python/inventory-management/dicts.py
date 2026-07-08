@@ -32,7 +32,13 @@ def add_items(inventory, items):
         dict: The inventory updated with the new items.
     """
 
-    pass
+    for item in items:
+        if item not in inventory.keys():
+            inventory[item] = 1
+        else:
+            inventory[item] +=1
+
+    return inventory
 
 
 def decrement_items(inventory, items):
