@@ -86,4 +86,4 @@ def list_inventory(inventory):
         list[tuple]: List of key, value tuples from the inventory dictionary.
     """
 
-    return list(inventory.items())
+    return [(key , value) for key , value in inventory.items() if value > 0]
