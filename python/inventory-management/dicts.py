@@ -51,8 +51,11 @@ def decrement_items(inventory, items):
     Returns:
         dict: Updated inventory with items decremented.
     """
+    for item in items:
+        if item in inventory.keys():
+            inventory[item] -= 1
 
-    pass
+    return inventory
 
 
 def remove_item(inventory, item):
