@@ -86,4 +86,4 @@ def list_inventory(inventory):
         list[tuple]: List of key, value tuples from the inventory dictionary.
     """
 
-    pass
+    return list(inventory.items())
