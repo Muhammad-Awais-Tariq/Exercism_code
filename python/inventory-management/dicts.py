@@ -70,7 +70,10 @@ def remove_item(inventory, item):
         dict: Updated inventory with item removed. Current inventory if item does not match.
     """
 
-    pass
+    if item in inventory:
+        inventory.pop(item)
+    
+    return inventory
 
 
 def list_inventory(inventory):
