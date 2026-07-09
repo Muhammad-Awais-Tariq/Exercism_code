@@ -93,7 +93,7 @@ def update_store_inventory(fulfillment_cart, store_inventory):
         dict: The store_inventory updated.
     """
 
-    for key , value in store_inventory.items():
+    for key , value in fulfillment_cart.items():
         store_inventory[key][0] -= fulfillment_cart[key][0]
         if store_inventory[key][0] == 0:
             store_inventory[key][0] = 'Out of Stock'
