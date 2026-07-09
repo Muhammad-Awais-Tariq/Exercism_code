@@ -30,8 +30,11 @@ def read_notes(notes):
     Returns:
         dict: A user shopping cart dictionary.
     """
-
-    pass
+    new_dict = {}
+    for item in notes:
+        new_dict[item] = 1
+    
+    return new_dict
 
 
 def update_recipes(ideas, recipe_updates):
