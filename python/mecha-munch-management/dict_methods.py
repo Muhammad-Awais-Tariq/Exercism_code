@@ -61,7 +61,7 @@ def sort_entries(cart):
         dict: A user's shopping cart sorted in alphabetical order.
     """
 
-    pass
+    return dict(sorted(cart.items()))
 
 
 def send_to_store(cart, aisle_mapping):
