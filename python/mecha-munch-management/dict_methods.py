@@ -12,7 +12,13 @@ def add_item(current_cart, items_to_add):
         dict: The updated user cart dictionary.
     """
 
-    pass
+    for item in items_to_add:
+        if item in current_cart.keys():
+            current_cart[item] += 1
+        else:
+            current_cart[item] = 1
+    
+    return current_cart
 
 
 def read_notes(notes):
