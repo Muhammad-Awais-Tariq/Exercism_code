@@ -75,11 +75,11 @@ def send_to_store(cart, aisle_mapping):
         dict: The fulfillment dictionary ready to send to store.
     """
     new_dict = {}
-    for key , value in aisle_mapping.items():
-        value.insert(0 ,cart[key])
-        new_dict[key] = value
 
-    return new_dict
+    for key, value in cart.items():
+        new_dict[key] = [value] + aisle_mapping[key]
+
+    return dict(sorted(new_dict.items(), reverse=True))
 
 
 def update_store_inventory(fulfillment_cart, store_inventory):
