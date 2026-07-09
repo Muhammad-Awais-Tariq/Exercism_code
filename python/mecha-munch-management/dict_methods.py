@@ -47,8 +47,8 @@ def update_recipes(ideas, recipe_updates):
     Returns:
         dict: The updated "recipe ideas" dict.
     """
-
-    pass
+    ideas |= recipe_updates
+    return ideas
 
 
 def sort_entries(cart):
