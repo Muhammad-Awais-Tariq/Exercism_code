@@ -56,7 +56,7 @@ def extend_route_information(route, more_route_information):
     Returns:
         dict: The extended route information.
     """
-    pass
+    return route | more_route_information
 
 
 def fix_wagon_depot(wagons_rows):
