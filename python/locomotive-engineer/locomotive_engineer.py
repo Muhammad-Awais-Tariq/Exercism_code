@@ -23,7 +23,13 @@ def fix_list_of_wagons(each_wagons_id, missing_wagons):
     Returns:
         list[int]: The corrected list of wagons.
     """
-    pass
+    a , b , *remaining = each_wagons_id
+    remaining.extend([a , b])
+    idx_required = remaining.index(1)
+    first_list = remaining[:idx_required+1]
+    second_list = remaining[idx_required+1:]
+    final_list = first_list + missing_wagons + second_list
+    return final_list
 
 
 def add_missing_stops(route):
