@@ -47,7 +47,7 @@ def check_drinks(drink_name, drink_ingredients):
         return f"{drink_name} Cocktail"
     return f"{drink_name} Mocktail"
     
-    
+
 def categorize_dish(dish_name, dish_ingredients):
     """Categorize `dish_name` based on `dish_ingredients`.
 
@@ -63,7 +63,16 @@ def categorize_dish(dish_name, dish_ingredients):
     All dishes will "fit" into one of the categories imported from `sets_categories_data.py`
     """
 
-    pass
+    if set(dish_ingredients).issubset(VEGAN):
+        return f"{dish_name}: VEGAN"
+    elif set(dish_ingredients).issubset(VEGETARIAN):
+        return f"{dish_name}: VEGETARIAN"
+    elif set(dish_ingredients).issubset(PALEO):
+        return f"{dish_name}: PALEO"
+    elif set(dish_ingredients).issubset(KETO):
+        return f"{dish_name}: KETO"
+    elif set(dish_ingredients).issubset(OMNIVORE):
+        return f"{dish_name}: OMNIVORE"
 
 
 def tag_special_ingredients(dish):
