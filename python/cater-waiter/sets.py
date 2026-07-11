@@ -7,7 +7,9 @@ from sets_categories_data import (VEGAN,
                                   PALEO,
                                   OMNIVORE,
                                   ALCOHOLS,
-                                  SPECIAL_INGREDIENTS)
+                                  SPECIAL_INGREDIENTS,
+                                  example_dishes,
+                                  EXAMPLE_INTERSECTION)
 
 
 def clean_ingredients(dish_name, dish_ingredients):
@@ -145,4 +147,10 @@ def singleton_ingredients(dishes, intersection):
     The function should return a `set` of ingredients that only appear in a single dish.
     """
 
-    pass
+    all_dishes = set()
+    for dish in dishes:
+        all_dishes.update(dish)
+    
+    return all_dishes - intersection
+
+print(singleton_ingredients(example_dishes, EXAMPLE_INTERSECTION))
