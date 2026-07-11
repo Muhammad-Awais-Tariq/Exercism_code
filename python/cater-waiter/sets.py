@@ -152,5 +152,3 @@ def singleton_ingredients(dishes, intersection):
         all_dishes.update(dish)
     
     return all_dishes - intersection
-
-print(singleton_ingredients(example_dishes, EXAMPLE_INTERSECTION))
