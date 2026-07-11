@@ -43,9 +43,11 @@ def check_drinks(drink_name, drink_ingredients):
 
     """
 
-    pass
-
-
+    if not(set(drink_ingredients).isdisjoint(ALCOHOLS)):
+        return f"{drink_name} Cocktail"
+    return f"{drink_name} Mocktail"
+    
+    
 def categorize_dish(dish_name, dish_ingredients):
     """Categorize `dish_name` based on `dish_ingredients`.
 
