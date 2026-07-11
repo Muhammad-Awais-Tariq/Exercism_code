@@ -25,7 +25,7 @@ def clean_ingredients(dish_name, dish_ingredients):
 
     """
 
-    pass
+    return (dish_name , set(dish_ingredients))
 
 
 def check_drinks(drink_name, drink_ingredients):
