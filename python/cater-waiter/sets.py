@@ -88,8 +88,7 @@ def tag_special_ingredients(dish):
     For the purposes of this exercise, all allergens or special ingredients that need to be tracked are in the
     SPECIAL_INGREDIENTS constant imported from `sets_categories_data.py`.
     """
-
-    pass
+    return (dish[0] , SPECIAL_INGREDIENTS.intersection(set(dish[1])))
 
 
 def compile_ingredients(dishes):
