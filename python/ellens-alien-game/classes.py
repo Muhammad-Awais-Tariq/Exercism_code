@@ -29,4 +29,8 @@ class Alien:
     def is_alive(self):
         return True if self.health > 0 else False
     
+    def teleport(self , x_coordinate , y_coordinate):
+        self.x_coordinate = x_coordinate
+        self.y_coordinate = y_coordinate
+    
 #TODO (Student): Create the new_aliens_collection() function below to call your Alien class with a list of coordinates
