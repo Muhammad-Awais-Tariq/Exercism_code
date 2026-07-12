@@ -18,8 +18,9 @@ class Alien:
 
     """
 
-    pass
-
+    def __init__(self ,x_coordinate , y_coordinate ):
+        self.x_coordinate = x_coordinate
+        self.y_coordinate  = y_coordinate 
+        self.health = 3
 
 #TODO (Student): Create the new_aliens_collection() function below to call your Alien class with a list of coordinates
-
