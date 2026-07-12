@@ -33,4 +33,7 @@ class Alien:
         self.x_coordinate = x_coordinate
         self.y_coordinate = y_coordinate
     
+    def collision_detector(self , other_object):
+        pass
+
 #TODO (Student): Create the new_aliens_collection() function below to call your Alien class with a list of coordinates
