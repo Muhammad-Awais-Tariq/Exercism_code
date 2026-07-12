@@ -39,3 +39,11 @@ class Alien:
         pass
     
 #TODO (Student): Create the new_aliens_collection() function below to call your Alien class with a list of coordinates
+
+def new_aliens_collection(positions):
+    all_aliens = []
+    for position in positions:
+        alien = Alien(position[0] , position[1])
+        all_aliens.append(alien)
+    
+    return all_aliens
