@@ -26,4 +26,7 @@ class Alien:
     def hit(self):
         self.health = self.health - 1
 
+    def is_alive(self):
+        return True if self.health > 0 else False
+    
 #TODO (Student): Create the new_aliens_collection() function below to call your Alien class with a list of coordinates
