@@ -38,7 +38,22 @@ def generate_seats(number):
 
     """
 
-    pass
+    generated = 0
+    row = 1
+
+    while generated < number:
+
+        if row == 13:
+            row += 1
+            continue
+        
+        for seat in ["A" , "B" , "C" , "D"]:
+            if generated == number:
+                return 
+            yield f"{row}{seat}"
+
+            generated += 1
+        row +=1
 
 
 def assign_seats(passengers):
