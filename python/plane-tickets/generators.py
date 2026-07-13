@@ -67,8 +67,12 @@ def assign_seats(passengers):
         Example output: {"Adele": "1A", "Björk": "1B"}
 
     """
-
-    pass
+    assigned_dict = {}
+    no_of_seats = len(passengers)
+    seats = generate_seats(no_of_seats)
+    for passenger in passengers:
+        assigned_dict[passenger] = next(seats)
+    return assigned_dict
 
 
 def generate_codes(seat_numbers, flight_id):
