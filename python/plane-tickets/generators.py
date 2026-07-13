@@ -86,5 +86,7 @@ def generate_codes(seat_numbers, flight_id):
         generator: A generator that yields 12 character long ticket codes.
 
     """
-
-    pass
+    for seat in seat_numbers:
+        total_zero = 12 - (len(seat) + len(flight_id))
+        code = f"{seat}{flight_id}{"0"*total_zero}"
+        yield code
