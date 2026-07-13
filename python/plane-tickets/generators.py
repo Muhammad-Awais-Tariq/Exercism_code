@@ -17,11 +17,13 @@ def generate_seat_letters(number):
 
     """
     generated = 0
-    for val in ["A" , "B" , "C" , "D"]:
-        if generated == number:
-            return
-        yield val
-        generated += 1
+    
+    while generated < number:
+        for val in ["A" , "B" , "C" , "D"]:
+            if generated == number:
+                return
+            yield val
+            generated += 1
 
 def generate_seats(number):
     """Generate a series of identifiers for airline seats.
