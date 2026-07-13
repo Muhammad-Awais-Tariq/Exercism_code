@@ -16,9 +16,9 @@ def generate_seat_letters(number):
         For example: A, B, C, D, A, B
 
     """
-
-    pass
-
+    for _ in range(number):
+        for val in ["A" , "B" , "C" , "D"]:
+            yield val
 
 def generate_seats(number):
     """Generate a series of identifiers for airline seats.
