@@ -24,7 +24,19 @@ def check_valid_triangle(sides):
 
 
 def equilateral(sides):
-    pass
+    """Checks if the triangle is equilateral.
+
+    Parameters:
+        sides(List) : sides of the triangle.
+
+    Returns:
+        bool: True if the sides are all equal else False.    
+    
+    """
+    if not check_valid_triangle(sides):
+        return False
+    
+    return len(set(sides)) == 1
 
 
 def isosceles(sides):
