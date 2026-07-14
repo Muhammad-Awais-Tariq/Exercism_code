@@ -40,7 +40,23 @@ def equilateral(sides):
 
 
 def isosceles(sides):
-    pass
+    """Checks if the triangle is isosceles.
+
+    Parameters:
+        sides(List) : sides of the triangle.
+
+    Returns:
+        bool: True if two sides are all equal else False.    
+    
+    """    
+
+    if not check_valid_triangle(sides):
+        return False
+    
+    if equilateral(sides):
+        return True
+    
+    return len(set(sides)) == 2
 
 
 def scalene(sides):
