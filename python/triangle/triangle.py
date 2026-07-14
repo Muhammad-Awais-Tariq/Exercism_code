@@ -60,4 +60,17 @@ def isosceles(sides):
 
 
 def scalene(sides):
-    pass
+    """Checks if the triangle is scalene.
+
+    Parameters:
+        sides(List) : sides of the triangle.
+
+    Returns:
+        bool: True if all sides are all not equal else False.    
+    
+    """   
+
+    if not check_valid_triangle(sides):
+        return False
+    
+    return len(set(sides)) == 3
