@@ -15,4 +15,13 @@ def square(number):
 
 
 def total():
-    pass
+    """ Returns the total number of grains on the chess board.
+    
+    Parameters:
+        None
+    
+    Return:
+        int: Total number of grains on the chess board.
+    """   
+
+    return sum(square(i) for i in range(1 , 65)) 
