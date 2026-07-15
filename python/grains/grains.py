@@ -7,11 +7,9 @@ def square(number):
     Return:
         int: The number of grains on the given square.
     """
-
     if 1 <= number <= 64:
         return 2 ** (number - 1)
-    else:
-        raise ValueError("square must be between 1 and 64")    
+    raise ValueError("square must be between 1 and 64")    
 
 
 def total():
@@ -23,5 +21,4 @@ def total():
     Return:
         int: Total number of grains on the chess board.
     """   
-
-    return sum(square(i) for i in range(1 , 65)) 
+    return sum(square(number) for number in range(1 , 65)) 
