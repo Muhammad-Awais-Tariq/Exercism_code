@@ -10,4 +10,9 @@ def is_armstrong_number(number):
     An Armstrong number is a number that is the sum of its own digits,
     each raised to the power of the number of digits.
     """
-    pass
+
+    digits = [int(d) for d in str(number)]
+    sum_of_digits = sum(n**(len(digits)) for n in digits)
+
+    return number == sum_of_digits
+
