@@ -16,4 +16,3 @@ def is_armstrong_number(number):
     sum_of_digits = sum(n**power for n in digits)
 
     return number == sum_of_digits
-
