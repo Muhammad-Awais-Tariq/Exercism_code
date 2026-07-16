@@ -12,7 +12,8 @@ def is_armstrong_number(number):
     """
 
     digits = [int(d) for d in str(number)]
-    sum_of_digits = sum(n**(len(digits)) for n in digits)
+    power = len(digits)
+    sum_of_digits = sum(n**power for n in digits)
 
     return number == sum_of_digits
 
