@@ -17,3 +17,6 @@ def response(hey_bob):
 
     if hey_bob.strip().endswith("?"):
         return "Sure."
+
+    if hey_bob.isupper():
+        return "Whoa, chill out!"
