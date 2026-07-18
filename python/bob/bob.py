@@ -15,16 +15,18 @@ def response(hey_bob):
         - "Whatever." for anything else.
     """
 
-    if hey_bob.isupper() and hey_bob.strip().endswith("?"):
+    stripped_string = hey_bob.strip()
+
+    if hey_bob.isupper() and stripped_string.endswith("?"):
         return "Calm down, I know what I'm doing!"
     
-    if hey_bob.strip().endswith("?"):
+    if stripped_string.endswith("?"):
         return "Sure."
 
     if hey_bob.isupper():
         return "Whoa, chill out!"
     
-    if hey_bob.isspace() or len(hey_bob) == 0 :
+    if len(stripped_string) == 0 :
         return "Fine. Be that way!"
 
     return "Whatever."
