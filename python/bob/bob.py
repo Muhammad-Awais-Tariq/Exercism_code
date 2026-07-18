@@ -26,3 +26,5 @@ def response(hey_bob):
     
     if hey_bob.isspace():
         return "Fine. Be that way!"
+
+    return "Whatever."
