@@ -14,3 +14,6 @@ def response(hey_bob):
         - "Fine. Be that way!" if the statement is empty or contains only whitespace.
         - "Whatever." for anything else.
     """
+
+    if hey_bob.strip().endswith("?"):
+        return "Sure."
