@@ -20,5 +20,6 @@ def convert(number):
 
     if number % 3 == 0:
         result += "Pling"
-        
+    elif number % 5 == 0:
+        result += "Plang"    
     return result
