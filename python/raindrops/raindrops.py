@@ -23,5 +23,7 @@ def convert(number):
     elif number % 5 == 0:
         result += "Plang"    
     elif number % 7 == 0:
-        result += "Plong"       
+        result += "Plong" 
+    else:
+        result == str(number)      
     return result
