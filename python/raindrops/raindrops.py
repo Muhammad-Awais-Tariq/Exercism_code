@@ -22,4 +22,6 @@ def convert(number):
         result += "Pling"
     elif number % 5 == 0:
         result += "Plang"    
+    elif number % 7 == 0:
+        result += "Plong"       
     return result
