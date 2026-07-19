@@ -15,3 +15,10 @@ def convert(number):
         - If the number is not divisible by 3, 5, or 7, return the number
           as a string.
     """
+
+    result = ""
+
+    if number % 3 == 0:
+        result += "Pling"
+        
+    return result
