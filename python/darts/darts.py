@@ -1,5 +1,6 @@
 import math
 
+
 def score(x, y):
     """Calculate the score earned by a dart landing at the given coordinates.
 
@@ -12,15 +13,15 @@ def score(x, y):
         of the target.
     """
 
-    distance = math.dist([0,0] , [x , y])
+    distance = math.dist([0, 0], [x, y])
 
     if distance <= 1:
         return 10
-    
-    if 1 < distance <= 5 :
+
+    if distance <= 5:
         return 5
-    
-    if 5 < distance <= 10:
+
+    if distance <= 10:
         return 1
 
     return 0
