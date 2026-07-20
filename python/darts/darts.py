@@ -13,3 +13,6 @@ def score(x, y):
     """
 
     distance = math.dist(x , y)
+
+    if distance <= 1:
+        return 10
