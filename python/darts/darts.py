@@ -22,3 +22,5 @@ def score(x, y):
     
     if 5 < distance <= 10:
         return 1
+
+    return 0
