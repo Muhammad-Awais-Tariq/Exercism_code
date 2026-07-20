@@ -1,3 +1,5 @@
+import math
+
 def score(x, y):
     """Calculate the score earned by a dart landing at the given coordinates.
 
@@ -9,3 +11,5 @@ def score(x, y):
         int: The score earned based on the dart's distance from the center
         of the target.
     """
+
+    distance = math.dist(x , y)
