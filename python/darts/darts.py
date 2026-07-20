@@ -1,2 +1,11 @@
 def score(x, y):
-    pass
+    """Calculate the score earned by a dart landing at the given coordinates.
+
+    Parameters:
+        x (float): The x-coordinate of the dart's landing position.
+        y (float): The y-coordinate of the dart's landing position.
+
+    Returns:
+        int: The score earned based on the dart's distance from the center
+        of the target.
+    """
