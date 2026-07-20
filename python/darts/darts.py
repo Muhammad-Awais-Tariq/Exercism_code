@@ -12,7 +12,7 @@ def score(x, y):
         of the target.
     """
 
-    distance = math.dist(x , y)
+    distance = math.dist([0,0] , [x , y])
 
     if distance <= 1:
         return 10
