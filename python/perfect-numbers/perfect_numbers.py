@@ -44,3 +44,6 @@ def classify(number):
     
     if aliquot_sum > number:
         return "abundant"
+    
+    if aliquot_sum < number:
+        return "deficient"
