@@ -37,4 +37,5 @@ def classify(number):
     if number < 1:
         raise ValueError("Classification is only possible for positive integers.")
     
+    aliquot_sum = sum(find_factor(number))
 
