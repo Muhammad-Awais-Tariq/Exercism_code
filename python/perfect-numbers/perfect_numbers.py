@@ -1,3 +1,15 @@
+
+def find_factor(number):
+    """Return the factors of a given number, excluding the number itself.
+
+    Parameters:
+        number (int): The number whose factors are to be found.
+
+    Returns:
+        list: The factors of the given number, excluding the number itself.
+    """
+
+
 def classify(number):
     """Classify a positive integer based on its aliquot sum.
 
