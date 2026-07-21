@@ -7,4 +7,4 @@ def reverse(text):
     Returns:
         str: The reversed string.
     """
-    pass
+    return text[::-1]
