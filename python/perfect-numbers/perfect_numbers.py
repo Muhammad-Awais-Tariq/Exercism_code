@@ -4,4 +4,8 @@ def classify(number):
     :param number: int a positive integer
     :return: str the classification of the input integer
     """
-    pass
+    
+    if number < 1:
+        raise ValueError("Classification is only possible for positive integers.")
+    
+    
