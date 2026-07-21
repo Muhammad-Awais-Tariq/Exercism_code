@@ -9,6 +9,19 @@ def find_factor(number):
         list: The factors of the given number, excluding the number itself.
     """
 
+    if number == 1:
+        return []
+
+    factors = [1]
+
+    for factor in range(2,int((((number)**0.5)+1))):
+        if number % factor == 0:
+            factors.append(factor)
+            pair_factor = number // factor
+            if pair_factor != factor:
+                factors.append(pair_factor)
+    
+    return factors
 
 def classify(number):
     """Classify a positive integer based on its aliquot sum.
