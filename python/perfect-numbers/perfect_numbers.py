@@ -39,3 +39,5 @@ def classify(number):
     
     aliquot_sum = sum(find_factor(number))
 
+    if aliquot_sum == number:
+        return "perfect"
