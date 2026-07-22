@@ -7,10 +7,5 @@ def is_pangram(sentence):
     Returns:
         bool: True if the sentence is a pangram, otherwise False.
     """
-    unique_letters = set()
-
-    for char in sentence.lower():
-        if char.isalpha():
-            unique_letters.add(char)
             
-    return len(unique_letters) == 26
+    return len(set(ltr for ltr in sentence.lower() if ltr.isalpha())) == 26
