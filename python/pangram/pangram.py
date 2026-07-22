@@ -7,4 +7,7 @@ def is_pangram(sentence):
     Returns:
         bool: True if the sentence is a pangram, otherwise False.
     """
-
+    
+    length_sentence = len(set(sentence.lower().replace(" " , "").removesuffix(".")))
+    
+    return length_sentence == 26
