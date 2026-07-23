@@ -1,2 +1,9 @@
 def is_isogram(phrase):
-    pass
+    """Check if the given phrase is an isogram.
+
+    Parameters:
+        phrase (str): The phrase to check.
+
+    Returns:
+        bool: True if the phrase is an isogram, otherwise False.
+    """
