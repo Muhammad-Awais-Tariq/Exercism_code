@@ -7,5 +7,5 @@ def is_isogram(phrase):
     Returns:
         bool: True if the phrase is an isogram, otherwise False.
     """
-
-    return len(set(ltr for ltr in phrase.lower() if ltr.isalpha())) == len([ltr for ltr in phrase.lower() if ltr.isalpha()])
+    only_letters = [ltr for ltr in phrase.lower() if ltr.isalpha()]
+    return len(set(only_letters)) == len(only_letters)
