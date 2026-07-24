@@ -8,3 +8,18 @@ def rotate(text, key):
     Returns:
         str: The encrypted text.
     """
+    ciphered_text = ""
+
+    for char in text:
+        if char.isalpha():
+            new_value_char = ord(char) + key
+            if char.islower():
+                if new_value_char > 122:
+                    new_value_char -= 25
+            else:
+                if new_value_char > 90:
+                    new_value_char -= 25                
+            char = chr(new_value_char)
+        ciphered_text += char
+
+    return ciphered_text
