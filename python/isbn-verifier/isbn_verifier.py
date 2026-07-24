@@ -22,6 +22,14 @@ def is_valid(isbn):
     sum_number = 0
 
     for multiplier in range(1,11):
-        sum_number += multiplier * int(formatted_number[multiplier-1].replace("X" , "10"))
+        number = formatted_number[multiplier-1]
+        if number.isdigit():
+            number = int(number)
+        else:
+            if number == "X":
+                number = 10
+            else:
+                return False       
+        sum_number += multiplier * number
     
     return sum_number % 11 == 0
