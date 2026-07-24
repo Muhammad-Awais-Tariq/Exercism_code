@@ -15,11 +15,13 @@ def rotate(text, key):
             new_value_char = ord(char) + key
             if char.islower():
                 if new_value_char > 122:
-                    new_value_char -= 25
+                    new_value_char -= 26
             else:
                 if new_value_char > 90:
-                    new_value_char -= 25                
-            char = chr(new_value_char)
-        ciphered_text += char
+                    new_value_char -= 26                
+            new_char = chr(new_value_char)
+            ciphered_text += new_char
+        else:
+            ciphered_text += char
 
     return ciphered_text
