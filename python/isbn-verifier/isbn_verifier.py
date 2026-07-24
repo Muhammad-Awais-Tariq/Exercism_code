@@ -7,3 +7,6 @@ def is_valid(isbn):
     Returns:
         bool: True if the number is an isbn, otherwise False.
     """
+
+    formatted_number = isbn.replace("-" , "").replace("X" , "10")
+    
