@@ -19,3 +19,4 @@ def colors():
     Returns:
         list: The list of valid colors.
     """
+    return Colors
