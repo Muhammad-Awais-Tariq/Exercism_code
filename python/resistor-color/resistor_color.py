@@ -10,7 +10,7 @@ def color_code(color):
     Returns:
         int: The color code.
     """
-    pass
+    return Colors.index(color)
 
 
 def colors():
