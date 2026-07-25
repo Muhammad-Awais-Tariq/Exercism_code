@@ -7,6 +7,13 @@ def to_rna(dna_strand):
     Returns:
         str: The RNA sequence corresponding to the given DNA strand.
     """
+    
+    dna_transcription = {
+        "G" : "C" ,
+        "C" : "G",
+        "T" : "A" ,
+        "A" : "U"
+    }
 
     rna_seq = ""
 
