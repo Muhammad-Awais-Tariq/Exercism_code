@@ -1,5 +1,5 @@
 
-Colors = ["black" , "brown" , "red" , "orange" , "yellow" , "green" , "blue" , "violet" , "grey" , "white"]
+COLORS = ["black" , "brown" , "red" , "orange" , "yellow" , "green" , "blue" , "violet" , "grey" , "white"]
 
 def color_code(color):
     """Return the code corresponding to the given color.
@@ -10,7 +10,7 @@ def color_code(color):
     Returns:
         int: The color code.
     """
-    return Colors.index(color)
+    return COLORS.index(color)
 
 
 def colors():
@@ -19,4 +19,4 @@ def colors():
     Returns:
         list: The list of valid colors.
     """
-    return Colors
+    return COLORS
