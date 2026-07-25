@@ -21,4 +21,6 @@ def to_rna(dna_strand):
         elif char == "T":
             rna_seq += "A"
         else:
-            rna_seq += "U"        
+            rna_seq += "U"      
+
+    return rna_seq  
