@@ -14,4 +14,8 @@ def color_code(color):
 
 
 def colors():
-    pass
+    """Return the list of valid colors.
+
+    Returns:
+        list: The list of valid colors.
+    """
