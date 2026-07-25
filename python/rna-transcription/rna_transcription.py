@@ -10,3 +10,15 @@ def to_rna(dna_strand):
 
     if not dna_strand:
         return ""
+
+    rna_seq = ""
+
+    for char in dna_strand:
+        if char == "G":
+            rna_seq += "C"
+        elif char == "C":
+            rna_seq += "G"
+        elif char == "T":
+            rna_seq += "A"
+        else:
+            rna_seq += "U"        
