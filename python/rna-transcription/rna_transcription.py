@@ -8,9 +8,6 @@ def to_rna(dna_strand):
         str: The RNA sequence corresponding to the given DNA strand.
     """
 
-    if not dna_strand:
-        return ""
-
     rna_seq = ""
 
     for char in dna_strand:
