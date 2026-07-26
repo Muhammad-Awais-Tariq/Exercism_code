@@ -10,3 +10,10 @@ def value(colors):
     Returns:
         int: The resistor value represented by the first two colors.
     """
+
+    color_value = ""
+
+    for color in range(2):
+        color_value += str(COLORS.index(colors[color]))
+
+    return int(color_value)
