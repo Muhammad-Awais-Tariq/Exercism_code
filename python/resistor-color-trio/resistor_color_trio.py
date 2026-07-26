@@ -28,3 +28,6 @@ def label(colors):
     Returns:
         str: The resistance label, including the appropriate unit.
     """
+
+    color_value = value(colors[:2])
+    
