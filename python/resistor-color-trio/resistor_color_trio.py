@@ -32,6 +32,9 @@ def label(colors):
     color_value = value(colors[:2])
     full_color_value = (color_value) * (10 **COLORS.index(colors[2]))
 
+    if not full_color_value:
+        return "0 ohms"
+
     if full_color_value % 1000000000 == 0:
         return f"{(full_color_value // 1000000000)} gigaohms"   
 
