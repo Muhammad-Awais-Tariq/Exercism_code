@@ -1,2 +1,9 @@
 def value(colors):
-    pass
+    """Return the resistor value represented by the first two colors.
+
+    Parameters:
+        colors (list): The resistor color bands.
+
+    Returns:
+        int: The resistor value represented by the first two colors.
+    """
