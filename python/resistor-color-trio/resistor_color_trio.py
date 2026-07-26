@@ -1,5 +1,6 @@
 
 COLORS = ["black" , "brown" , "red" , "orange" , "yellow" , "green" , "blue" , "violet" , "grey" , "white"]
+UNIT_COLORS = ["black" , "brown" , "red" , "orange" , "yellow"]
 
 def value(colors):
     """Return the resistor value represented by the first two colors.
@@ -30,4 +31,3 @@ def label(colors):
     """
 
     color_value = value(colors[:2])
-    
