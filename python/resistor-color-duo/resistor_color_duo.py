@@ -1,3 +1,6 @@
+
+COLORS = ["black" , "brown" , "red" , "orange" , "yellow" , "green" , "blue" , "violet" , "grey" , "white"]
+
 def value(colors):
     """Return the resistor value represented by the first two colors.
 
