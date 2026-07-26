@@ -31,3 +31,4 @@ def label(colors):
     """
 
     color_value = value(colors[:2])
+    full_color_value = f"{color_value}{UNIT_COLORS.index(colors[2])*"0"}"
