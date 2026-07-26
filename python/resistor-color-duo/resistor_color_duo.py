@@ -13,7 +13,7 @@ def value(colors):
 
     color_value = ""
 
-    for color in range(2):
-        color_value += str(COLORS.index(colors[color]))
+    for color_index in range(2):
+        color_value += str(COLORS.index(colors[color_index]))
 
     return int(color_value)
