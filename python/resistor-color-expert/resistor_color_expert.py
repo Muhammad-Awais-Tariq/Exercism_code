@@ -25,7 +25,7 @@ def value(colors ,total_values):
     color_value = ""
 
     if len(colors) == 1:
-        return int(COLORS.index(colors[0]))
+        return COLORS.index(colors[0])
     
     for color_index in range(total_values):
         color_value += str(COLORS.index(colors[color_index]))
