@@ -11,11 +11,12 @@ TOLERANCE_BAND_VALUES = {
     "silver" : "±10%"
 }
 
-def value(colors):
+def value(colors ,total_values):
     """Return the resistor value represented by the first two colors.
 
     Parameters:
         colors (list): The resistor color bands.
+        total_values (int): How many bands play a role in determining the value.
 
     Returns:
         int: The resistor value represented by the first two colors.
@@ -26,7 +27,7 @@ def value(colors):
     if len(colors) == 1:
         return int(COLORS.index(colors[0]))
     
-    for color_index in range(2):
+    for color_index in range(total_values):
         color_value += str(COLORS.index(colors[color_index]))
 
     return int(color_value)
@@ -41,9 +42,19 @@ def label(colors):
     Returns:
         str: The resistance label, including the appropriate unit.
     """
+    total_colors = len(colors)
 
-    color_value = value(colors[:2])
-    full_color_value = (color_value) * (10 **COLORS.index(colors[2]))
+    if total_colors == 1:
+        color_value = value(colors,1)
+        full_color_value = color_value   
+
+    elif 2 <= total_colors < 5:
+        color_value = value(colors , 2)
+        full_color_value = (color_value ) * (10 **COLORS.index(colors[2]))
+        
+    else:
+        color_value = value(colors , 3)
+        full_color_value = (color_value) * (10 **COLORS.index(colors[3]))        
 
     if not full_color_value:
         return "0 ohms"
@@ -71,6 +82,6 @@ def resistor_label(colors):
     """
 
     resistance_label = label(colors)
-    if colors[-1] in TOLERANCE_BAND_VALUES.keys():
+    if colors[-1] in TOLERANCE_BAND_VALUES:
         return f"{resistance_label} {TOLERANCE_BAND_VALUES[colors[-1]]}"
     return resistance_label
