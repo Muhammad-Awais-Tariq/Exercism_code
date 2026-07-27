@@ -1,5 +1,15 @@
 
 COLORS = ["black" , "brown" , "red" , "orange" , "yellow" , "green" , "blue" , "violet" , "grey" , "white"]
+TOLERANCE_BAND_VALUES = {
+    "grey" : "±0.05%",
+    "violet" : "±0.1%",
+    "blue" : "±0.25%",
+    "green" : "±0.5%",
+    "brown" : "±1%",
+    "red" : "±2%",
+    "gold" : "±5%",
+    "silver" : "±10%"
+}
 
 def value(colors):
     """Return the resistor value represented by the first two colors.
@@ -56,3 +66,5 @@ def resistor_label(colors):
     Returns:
         str: The resistor's resistance value with the appropriate unit and tolerance.
     """
+
+    resistance_label = label(colors[:3])
