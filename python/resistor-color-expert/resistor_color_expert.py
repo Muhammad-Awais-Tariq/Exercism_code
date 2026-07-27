@@ -48,4 +48,11 @@ def label(colors):
 
 
 def resistor_label(colors):
-    pass
+    """Return the formatted label for a resistor.
+
+    Parameters:
+        colors (list): The four color bands of the resistor.
+
+    Returns:
+        str: The resistor's resistance value with the appropriate unit and tolerance.
+    """
