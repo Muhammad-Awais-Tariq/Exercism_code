@@ -67,4 +67,7 @@ def resistor_label(colors):
         str: The resistor's resistance value with the appropriate unit and tolerance.
     """
 
-    resistance_label = label(colors[:3])
+    resistance_label = label(colors)
+    if colors[-1] in TOLERANCE_BAND_VALUES.keys():
+        return f"{resistance_label} {TOLERANCE_BAND_VALUES[colors[3]]}"
+    return resistance_label
