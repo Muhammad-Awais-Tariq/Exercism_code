@@ -11,15 +11,15 @@ TOLERANCE_BAND_VALUES = {
     "silver" : "±10%"
 }
 
-def value(colors ,total_values):
-    """Return the resistor value represented by the first two colors.
+def value(colors, total_values):
+    """Return the resistor value represented by the specified color bands.
 
     Parameters:
         colors (list): The resistor color bands.
-        total_values (int): How many bands play a role in determining the value.
+        total_values (int): The number of significant color bands to use.
 
     Returns:
-        int: The resistor value represented by the first two colors.
+        int: The resistor value represented by the specified color bands.
     """
 
     color_value = ""
