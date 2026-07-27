@@ -51,7 +51,7 @@ def label(colors):
     elif 2 <= total_colors < 5:
         color_value = value(colors , 2)
         full_color_value = (color_value ) * (10 **COLORS.index(colors[2]))
-        
+
     else:
         color_value = value(colors , 3)
         full_color_value = (color_value) * (10 **COLORS.index(colors[3]))        
@@ -59,14 +59,14 @@ def label(colors):
     if not full_color_value:
         return "0 ohms"
 
-    if full_color_value % 1000000000 == 0:
-        return f"{(full_color_value // 1000000000)} gigaohms"   
+    if full_color_value >= 1000000000 :
+        return f"{(full_color_value / 1000000000):g} gigaohms"   
 
-    if full_color_value % 1000000 == 0:
-        return f"{(full_color_value // 1000000)} megaohms"
+    if full_color_value  >= 1000000:
+        return f"{(full_color_value / 1000000):g} megaohms"
         
-    if full_color_value % 1000 == 0:
-        return f"{(full_color_value // 1000)} kiloohms"
+    if full_color_value  >= 1000 :
+        return f"{(full_color_value / 1000):g} kiloohms"
 
     return f"{full_color_value} ohms"
 
