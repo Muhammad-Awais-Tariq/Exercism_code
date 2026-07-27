@@ -23,6 +23,9 @@ def value(colors):
 
     color_value = ""
 
+    if len(colors) == 1:
+        return int(COLORS.index(colors[0]))
+    
     for color_index in range(2):
         color_value += str(COLORS.index(colors[color_index]))
 
@@ -69,5 +72,5 @@ def resistor_label(colors):
 
     resistance_label = label(colors)
     if colors[-1] in TOLERANCE_BAND_VALUES.keys():
-        return f"{resistance_label} {TOLERANCE_BAND_VALUES[colors[3]]}"
+        return f"{resistance_label} {TOLERANCE_BAND_VALUES[colors[-1]]}"
     return resistance_label
