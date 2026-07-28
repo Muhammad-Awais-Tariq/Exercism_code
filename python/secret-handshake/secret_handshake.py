@@ -15,7 +15,7 @@ def commands(binary_str):
         3 : "jump"
     }
 
-    one_index = [i for i,char in enumerate(binary_str[::-1]) if char == "1"]
+    one_index = [index for index,char in enumerate(binary_str[::-1]) if char == "1"]
 
     if len(one_index) == 0:
         return []
