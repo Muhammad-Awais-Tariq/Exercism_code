@@ -15,15 +15,16 @@ def commands(binary_str):
         3 : "jump"
     }
 
-    one_index = [i for i,char in enumerate(binary_str) if char == "1"]
+    one_index = [i for i,char in enumerate(binary_str[::-1]) if char == "1"]
 
     if len(one_index) == 0:
         return []
     
-    final_code = ""
+    final_code = []
 
     for index in one_index:
-        final_code += code_dict[index]
+        if index in code_dict:
+            final_code.append(code_dict[index])
 
     if 4 in one_index:
         return final_code[::-1]
