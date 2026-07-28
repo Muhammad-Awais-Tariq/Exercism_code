@@ -16,3 +16,16 @@ def commands(binary_str):
     }
 
     one_index = [i for i,char in enumerate(binary_str) if char == "1"]
+
+    if len(one_index) == 0:
+        return []
+    
+    final_code = ""
+
+    for index in one_index:
+        final_code += code_dict[index]
+
+    if 4 in one_index:
+        return final_code[::-1]
+
+    return final_code
