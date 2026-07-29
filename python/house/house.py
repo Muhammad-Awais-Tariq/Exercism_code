@@ -33,5 +33,21 @@ def recite(start_verse, end_verse):
                "married",
                "woke",
                "kept",
-               "belonged"
+               "belonged to"
     ]
+
+    verses = []
+
+    for verse_num in range(start_verse, end_verse + 1):
+        index = verse_num - 1
+
+        verse = f"This is the {things[index]}"
+
+        while index > 0:
+            verse += f" that {actions[index - 1]} the {things[index - 1]}"
+            index -= 1
+
+        verse += "."
+        verses.append(verse)
+
+    return verses
