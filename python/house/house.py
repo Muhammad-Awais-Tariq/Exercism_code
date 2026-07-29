@@ -8,3 +8,17 @@ def recite(start_verse, end_verse):
     Returns:
         list[str]: The requested verses, in order.
     """
+
+    things = ["house that Jack built" , 
+              "malt",
+              "rat",
+              "cat",
+              "dog",
+              "cow with the crumpled horn",
+              "maiden all forlorn",
+              "man all tattered and torn",
+              "priest all shaven and shorn",
+              "rooster that crowed in the morn",
+              "farmer sowing his corn",
+              "horse and the hound and the horn"
+              ]
