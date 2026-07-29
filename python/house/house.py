@@ -22,3 +22,16 @@ def recite(start_verse, end_verse):
               "farmer sowing his corn",
               "horse and the hound and the horn"
               ]
+
+    actions = ["lay in",
+               "ate",
+               "killed",
+               "worried",
+               "tossed",
+               "milked",
+               "kissed",
+               "married",
+               "woke",
+               "kept",
+               "belonged"
+    ]
