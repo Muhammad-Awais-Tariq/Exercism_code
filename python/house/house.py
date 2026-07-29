@@ -1,2 +1,10 @@
 def recite(start_verse, end_verse):
-    pass
+    """Return the requested verses of the nursery rhyme.
+
+    Parameters:
+        start_verse (int): The first verse to recite.
+        end_verse (int): The last verse to recite.
+
+    Returns:
+        list[str]: The requested verses, in order.
+    """
