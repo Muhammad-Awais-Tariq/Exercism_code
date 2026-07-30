@@ -12,20 +12,19 @@ def find(search_list, value):
         ValueError: If the value is not found in the list.
     """
 
-    sorted(search_list)
     left = 0
-    right = len(search_list) 
+    right = len(search_list) - 1
 
-    while left < right:
+    while left <= right:
         middle = (left + right) // 2
 
         if value == search_list[middle]:
             return middle
 
         elif value < search_list[middle]:
-            right = middle
+            right = middle - 1
 
-        else:
-            left = middle
+        elif value > search_list[middle] :
+            left = middle + 1
 
     raise ValueError("value not in array")
