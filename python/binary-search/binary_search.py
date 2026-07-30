@@ -15,3 +15,8 @@ def find(search_list, value):
     sorted(search_list)
     left = 0
     right = len(search_list) 
+
+    while left < right:
+        middle = (left + right) // 2
+
+        
