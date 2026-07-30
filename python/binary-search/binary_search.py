@@ -19,4 +19,13 @@ def find(search_list, value):
     while left < right:
         middle = (left + right) // 2
 
-        
+        if value == search_list[middle]:
+            return middle
+
+        elif value < search_list[middle]:
+            right = middle
+
+        else:
+            left = middle
+
+    raise ValueError("value not in array")
