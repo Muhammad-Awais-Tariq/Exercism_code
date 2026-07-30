@@ -11,3 +11,7 @@ def find(search_list, value):
     Raises:
         ValueError: If the value is not found in the list.
     """
+
+    sorted(search_list)
+    left = 0
+    right = len(search_list) 
