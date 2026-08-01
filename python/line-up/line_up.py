@@ -19,3 +19,6 @@ def line_up(name, number):
 
     if number != 11 and last_digit == 1:
         postfix = "st"
+
+    elif number != 12 and last_digit == 2:
+        postfix = "nd"
