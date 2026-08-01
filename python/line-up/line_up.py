@@ -16,15 +16,15 @@ def line_up(name, number):
     """
 
     last_digit = number % 10
-    last_num = number % 100
+    last_two_digits = number % 100
 
-    if last_num != 11 and last_digit == 1:
+    if last_two_digits != 11 and last_digit == 1:
         postfix = "st"
 
-    elif last_num != 12 and last_digit == 2:
+    elif last_two_digits != 12 and last_digit == 2:
         postfix = "nd"
 
-    elif last_num != 13 and last_digit == 3:
+    elif last_two_digits != 13 and last_digit == 3:
         postfix = "rd"
 
     else:
