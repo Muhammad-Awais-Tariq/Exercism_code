@@ -14,3 +14,8 @@ def line_up(name, number):
         - Numbers ending in 3 (except those ending in 13) use "rd".
         - All other numbers use "th".
     """
+
+    last_digit = number % 10
+
+    if number != 11 and last_digit == 1:
+        postfix = "st"
