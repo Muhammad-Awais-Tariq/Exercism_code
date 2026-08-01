@@ -28,3 +28,5 @@ def line_up(name, number):
 
     else:
         postfix = "th"
+
+    return f"{name}, you are the {number}{postfix} customer we serve today. Thank you!"
