@@ -22,3 +22,6 @@ def line_up(name, number):
 
     elif number != 12 and last_digit == 2:
         postfix = "nd"
+
+    elif number != 13 and last_digit == 3:
+        postfix = "rd"
