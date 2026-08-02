@@ -12,7 +12,14 @@ def square_of_sum(number):
 
 
 def sum_of_squares(number):
-    pass
+    """Return the sum of the squares of all natural numbers up to the given number.
+
+    Parameters:
+        number (int): The upper limit of the natural numbers.
+
+    Returns:
+        int: The sum of the squares.
+    """
 
 
 def difference_of_squares(number):
