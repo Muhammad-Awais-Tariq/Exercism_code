@@ -25,4 +25,12 @@ def sum_of_squares(number):
 
 
 def difference_of_squares(number):
-    pass
+    """Return the difference between the square of the sum and the sum of the squares of all natural numbers up to the given number.
+
+    Parameters:
+        number (int): The upper limit of the natural numbers.
+
+    Returns:
+        int: The difference between the square of the sum and the sum of the squares.
+    """
+    
