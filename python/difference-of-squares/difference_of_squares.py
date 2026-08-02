@@ -33,4 +33,5 @@ def difference_of_squares(number):
     Returns:
         int: The difference between the square of the sum and the sum of the squares.
     """
-    
+
+    return square_of_sum(number) - sum_of_squares(number)
