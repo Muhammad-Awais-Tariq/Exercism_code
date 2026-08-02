@@ -21,6 +21,8 @@ def sum_of_squares(number):
         int: The sum of the squares.
     """
 
+    return sum(x ** 2 for x in range(number + 1))
+
 
 def difference_of_squares(number):
     pass
