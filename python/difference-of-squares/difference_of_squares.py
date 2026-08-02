@@ -8,6 +8,8 @@ def square_of_sum(number):
         int: The square of the sum.
     """
 
+    return sum(x for x in range(number + 1)) ** 2
+
 
 def sum_of_squares(number):
     pass
