@@ -8,7 +8,7 @@ def square_of_sum(number):
         int: The square of the sum.
     """
 
-    return sum(x for x in range(number + 1)) ** 2
+    return sum(number for number in range(number + 1)) ** 2
 
 
 def sum_of_squares(number):
@@ -21,7 +21,7 @@ def sum_of_squares(number):
         int: The sum of the squares.
     """
 
-    return sum(x ** 2 for x in range(number + 1))
+    return sum(number ** 2 for number in range(number + 1))
 
 
 def difference_of_squares(number):
