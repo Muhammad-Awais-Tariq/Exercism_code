@@ -96,7 +96,16 @@ def foldl(function, list, initial):
 
 
 def foldr(function, list, initial):
-    pass
+    """Reduce a list from right to left using an accumulator.
+
+    Parameters:
+        function (callable): The function used to combine the accumulator and each element.
+        list (list): The list to reduce.
+        initial: The initial value of the accumulator.
+
+    Returns:
+        int: The final value of the accumulator after processing all elements.
+    """
 
 
 def reverse(list):
