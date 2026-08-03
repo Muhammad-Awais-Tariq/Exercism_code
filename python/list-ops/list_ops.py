@@ -58,7 +58,7 @@ def length(list):
     for element in list:
         length_list += 1
 
-    return length_list    
+    return length_list
 
 
 def map(function, list):
@@ -84,13 +84,13 @@ def foldl(function, list, initial):
         initial: The initial value of the accumulator.
 
     Returns:
-        int: The final value of the accumulator after processing all elements.
+        The final accumulated value.
     """
 
     accumulator = initial
 
     for element in list:
-        accumulator = function(accumulator , element)
+        accumulator = function(accumulator, element)
 
     return accumulator
 
@@ -104,15 +104,15 @@ def foldr(function, list, initial):
         initial: The initial value of the accumulator.
 
     Returns:
-        int: The final value of the accumulator after processing all elements.
+        The final accumulated value.
     """
 
     accumulator = initial
 
     for element in list[::-1]:
-        accumulator = function(accumulator , element)
+        accumulator = function(accumulator, element)
 
-    return accumulator    
+    return accumulator
 
 
 def reverse(list):
