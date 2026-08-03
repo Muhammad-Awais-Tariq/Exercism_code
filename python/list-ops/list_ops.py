@@ -87,6 +87,13 @@ def foldl(function, list, initial):
         int: The final value of the accumulator after processing all elements.
     """
 
+    accumulator = initial
+
+    for element in list:
+        accumulator = function(accumulator , element)
+
+    return accumulator
+
 
 def foldr(function, list, initial):
     pass
