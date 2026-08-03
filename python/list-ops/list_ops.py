@@ -72,6 +72,8 @@ def map(function, list):
         list: A new list containing the transformed elements.
     """
 
+    return [function(element) for element in list]
+
 
 def foldl(function, list, initial):
     pass
