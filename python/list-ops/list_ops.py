@@ -30,7 +30,15 @@ def concat(lists):
 
 
 def filter(function, list):
-    pass
+    """Return a list containing the elements for which the function returns True.
+
+    Parameters:
+        function (callable): The function used to test each element.
+        list (list): The list to filter.
+
+    Returns:
+        list: A new list containing the elements that satisfy the function.
+    """
 
 
 def length(list):
