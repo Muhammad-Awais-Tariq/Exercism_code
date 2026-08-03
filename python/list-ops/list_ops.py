@@ -124,3 +124,5 @@ def reverse(list):
     Returns:
         list: A new list containing the elements in reverse order.
     """
+
+    return list[::-1]
