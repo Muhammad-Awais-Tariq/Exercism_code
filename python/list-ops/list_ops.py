@@ -21,6 +21,12 @@ def concat(lists):
     Returns:
         list: A single flattened list.
     """
+    flattened_list = []
+
+    for element in lists:
+        flattened_list += element
+
+    return flattened_list
 
 
 def filter(function, list):
