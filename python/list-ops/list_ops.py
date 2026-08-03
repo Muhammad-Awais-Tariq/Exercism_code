@@ -53,6 +53,13 @@ def length(list):
         int: The number of elements in the list.
     """
 
+    length_list = 0
+
+    for element in list:
+        length_list += 1
+
+    return length_list    
+
 
 def map(function, list):
     pass
