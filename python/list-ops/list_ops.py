@@ -116,4 +116,11 @@ def foldr(function, list, initial):
 
 
 def reverse(list):
-    pass
+    """Return a new list with the elements in reverse order.
+
+    Parameters:
+        list (list): The list to reverse.
+
+    Returns:
+        list: A new list containing the elements in reverse order.
+    """
