@@ -44,7 +44,14 @@ def filter(function, list):
 
 
 def length(list):
-    pass
+    """Return the number of elements in a list.
+
+    Parameters:
+        list (list): The list to measure.
+
+    Returns:
+        int: The number of elements in the list.
+    """
 
 
 def map(function, list):
