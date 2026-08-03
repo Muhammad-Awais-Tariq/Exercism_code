@@ -107,6 +107,13 @@ def foldr(function, list, initial):
         int: The final value of the accumulator after processing all elements.
     """
 
+    accumulator = initial
+
+    for element in list[::-1]:
+        accumulator = function(accumulator , element)
+
+    return accumulator    
+
 
 def reverse(list):
     pass
