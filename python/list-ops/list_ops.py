@@ -84,7 +84,7 @@ def foldl(function, list, initial):
         initial: The initial value of the accumulator.
 
     Returns:
-        Any: The final value of the accumulator after processing all elements.
+        int: The final value of the accumulator after processing all elements.
     """
 
 
