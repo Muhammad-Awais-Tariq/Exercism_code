@@ -62,7 +62,15 @@ def length(list):
 
 
 def map(function, list):
-    pass
+    """Return a new list with the function applied to each element.
+
+    Parameters:
+        function (callable): The function to apply to each element.
+        list (list): The list to transform.
+
+    Returns:
+        list: A new list containing the transformed elements.
+    """
 
 
 def foldl(function, list, initial):
