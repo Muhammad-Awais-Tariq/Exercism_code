@@ -13,7 +13,14 @@ def append(list1, list2):
 
 
 def concat(lists):
-    pass
+    """Concatenate a list of lists into a single flat list.
+
+    Parameters:
+        lists (list): A list of lists.
+
+    Returns:
+        list: A single flattened list.
+    """
 
 
 def filter(function, list):
