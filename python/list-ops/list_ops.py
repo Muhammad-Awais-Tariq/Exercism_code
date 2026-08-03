@@ -76,7 +76,16 @@ def map(function, list):
 
 
 def foldl(function, list, initial):
-    pass
+    """Reduce a list from left to right using an accumulator.
+
+    Parameters:
+        function (callable): The function used to combine the accumulator and each element.
+        list (list): The list to reduce.
+        initial: The initial value of the accumulator.
+
+    Returns:
+        Any: The final value of the accumulator after processing all elements.
+    """
 
 
 def foldr(function, list, initial):
