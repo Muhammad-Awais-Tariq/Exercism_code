@@ -9,6 +9,8 @@ def append(list1, list2):
         list: The first list with the elements of the second list appended.
     """
 
+    return list1 + list2
+
 
 def concat(lists):
     pass
