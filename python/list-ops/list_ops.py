@@ -40,6 +40,8 @@ def filter(function, list):
         list: A new list containing the elements that satisfy the function.
     """
 
+    return [element for element in list if function(element)]
+
 
 def length(list):
     pass
