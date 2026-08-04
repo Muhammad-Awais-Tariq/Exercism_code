@@ -10,8 +10,8 @@ def transform(legacy_data):
 
     result = {}
 
-    for key , values in legacy_data.items():
-        for value in values:
-            result[value.lower()] = key
+    for key , letters in legacy_data.items():
+        for letter in letters:
+            result[letter.lower()] = key
 
     return result
