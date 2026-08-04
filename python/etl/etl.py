@@ -7,3 +7,11 @@ def transform(legacy_data):
     Returns:
         dict: A dictionary mapping lowercase letters to their corresponding scores.
     """
+
+    result = {}
+
+    for key , values in legacy_data.items():
+        for value in values:
+            result[value.lower()] = key
+
+    return result
