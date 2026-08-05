@@ -11,3 +11,10 @@ class SpaceAge:
     def _calculate_earth_age(self):
         earth_year_in_seconds = 31557600
         return self.seconds / earth_year_in_seconds
+
+    def on_earth():
+        """Calculate the person's age in Earth years.
+
+        Returns:
+            float: The person's age in Earth years.
+        """
