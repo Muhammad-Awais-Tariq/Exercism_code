@@ -52,4 +52,8 @@ class SpaceAge:
         Returns:
             float: The person's age in Mars years.
         """        
+
+        earth_age = self._calculate_earth_age()
+        Mars_orbit = 1.8808158
+        return earth_age / Mars_orbit   
          
