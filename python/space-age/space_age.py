@@ -56,4 +56,11 @@ class SpaceAge:
         earth_age = self._calculate_earth_age()
         Mars_orbit = 1.8808158
         return earth_age / Mars_orbit   
+
+    def on_jupiter(self):
+        """Calculate the person's age in Jupiter years.
+
+        Returns:
+            float: The person's age in Jupiter years.
+        """        
          
