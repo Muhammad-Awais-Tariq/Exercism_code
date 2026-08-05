@@ -28,5 +28,7 @@ class SpaceAge:
             float: The person's age in Mercury years.
         """
 
-
+        earth_age = self._calculate_earth_age()
+        mercury_orbit = 0.2408467
+        return earth_age / mercury_orbit
 
