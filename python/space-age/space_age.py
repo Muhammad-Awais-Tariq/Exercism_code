@@ -90,3 +90,6 @@ class SpaceAge:
             float: The person's age in Uranus years.
         """                    
 
+        earth_age = self._calculate_earth_age()
+        Uranus_orbit = 84.016846
+        return earth_age / Uranus_orbit        
