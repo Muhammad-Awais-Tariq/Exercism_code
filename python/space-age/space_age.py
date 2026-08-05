@@ -5,13 +5,14 @@ class SpaceAge:
     the equivalent age on each planet.
     """
 
+    EARTH_YEAR_IN_SECONDS = 31557600
+
     def __init__(self, seconds):
         self.seconds = seconds
 
 
     def _calculate_earth_age(self):
-        earth_year_in_seconds = 31557600
-        return self.seconds / earth_year_in_seconds
+        return self.seconds / self.EARTH_YEAR_IN_SECONDS
 
 
     def on_earth(self):
@@ -20,7 +21,6 @@ class SpaceAge:
         Returns:
             float: The person's age in Earth years.
         """
-
         return self._calculate_earth_age()
 
 
@@ -30,21 +30,20 @@ class SpaceAge:
         Returns:
             float: The person's age in Mercury years.
         """
-
         earth_age = self._calculate_earth_age()
         mercury_orbit = 0.2408467
         return earth_age / mercury_orbit
 
 
     def on_venus(self):
-        """Calculate the person's age in Mercury years.
+        """Calculate the person's age in Venus years.
 
         Returns:
-            float: The person's age in Mercury years.
-        """        
+            float: The person's age in Venus years.
+        """
         earth_age = self._calculate_earth_age()
-        Venus_orbit = 0.61519726
-        return earth_age / Venus_orbit    
+        venus_orbit = 0.61519726
+        return earth_age / venus_orbit
 
 
     def on_mars(self):
@@ -52,11 +51,10 @@ class SpaceAge:
 
         Returns:
             float: The person's age in Mars years.
-        """        
-
+        """
         earth_age = self._calculate_earth_age()
-        Mars_orbit = 1.8808158
-        return earth_age / Mars_orbit   
+        mars_orbit = 1.8808158
+        return earth_age / mars_orbit
 
 
     def on_jupiter(self):
@@ -64,11 +62,10 @@ class SpaceAge:
 
         Returns:
             float: The person's age in Jupiter years.
-        """      
-
+        """
         earth_age = self._calculate_earth_age()
-        Jupiter_orbit = 11.862615
-        return earth_age / Jupiter_orbit     
+        jupiter_orbit = 11.862615
+        return earth_age / jupiter_orbit
 
 
     def on_saturn(self):
@@ -76,23 +73,21 @@ class SpaceAge:
 
         Returns:
             float: The person's age in Saturn years.
-        """                    
-
+        """
         earth_age = self._calculate_earth_age()
-        Saturn_orbit = 29.447498
-        return earth_age / Saturn_orbit      
+        saturn_orbit = 29.447498
+        return earth_age / saturn_orbit
 
 
-    def on_Uranus(self):
+    def on_uranus(self):
         """Calculate the person's age in Uranus years.
 
         Returns:
             float: The person's age in Uranus years.
-        """                    
-
+        """
         earth_age = self._calculate_earth_age()
-        Uranus_orbit = 84.016846
-        return earth_age / Uranus_orbit    
+        uranus_orbit = 84.016846
+        return earth_age / uranus_orbit
 
 
     def on_neptune(self):
@@ -100,8 +95,7 @@ class SpaceAge:
 
         Returns:
             float: The person's age in Neptune years.
-        """                    
-
+        """
         earth_age = self._calculate_earth_age()
-        Neptune_orbit = 164.79132
-        return earth_age / Neptune_orbit      
+        neptune_orbit = 164.79132
+        return earth_age / neptune_orbit
