@@ -7,6 +7,7 @@ class SpaceAge:
 
     EARTH_YEAR_IN_SECONDS = 31557600
 
+
     def __init__(self, seconds):
         self.seconds = seconds
 
@@ -21,7 +22,7 @@ class SpaceAge:
         Returns:
             float: The person's age in Earth years.
         """
-        return self._calculate_earth_age()
+        return float(f"{self._calculate_earth_age():.2f}")
 
 
     def on_mercury(self):
@@ -32,7 +33,7 @@ class SpaceAge:
         """
         earth_age = self._calculate_earth_age()
         mercury_orbit = 0.2408467
-        return earth_age / mercury_orbit
+        return float(f"{earth_age / mercury_orbit:.2f}")
 
 
     def on_venus(self):
@@ -43,7 +44,7 @@ class SpaceAge:
         """
         earth_age = self._calculate_earth_age()
         venus_orbit = 0.61519726
-        return earth_age / venus_orbit
+        return float(f"{earth_age / venus_orbit:.2f}")
 
 
     def on_mars(self):
@@ -54,7 +55,7 @@ class SpaceAge:
         """
         earth_age = self._calculate_earth_age()
         mars_orbit = 1.8808158
-        return earth_age / mars_orbit
+        return float(f"{earth_age / mars_orbit:.2f}")
 
 
     def on_jupiter(self):
@@ -65,7 +66,7 @@ class SpaceAge:
         """
         earth_age = self._calculate_earth_age()
         jupiter_orbit = 11.862615
-        return earth_age / jupiter_orbit
+        return float(f"{earth_age / jupiter_orbit:.2f}")
 
 
     def on_saturn(self):
@@ -76,7 +77,7 @@ class SpaceAge:
         """
         earth_age = self._calculate_earth_age()
         saturn_orbit = 29.447498
-        return earth_age / saturn_orbit
+        return float(f"{earth_age / saturn_orbit:.2f}")
 
 
     def on_uranus(self):
@@ -87,7 +88,7 @@ class SpaceAge:
         """
         earth_age = self._calculate_earth_age()
         uranus_orbit = 84.016846
-        return earth_age / uranus_orbit
+        return float(f"{earth_age / uranus_orbit:.2f}")
 
 
     def on_neptune(self):
@@ -98,4 +99,4 @@ class SpaceAge:
         """
         earth_age = self._calculate_earth_age()
         neptune_orbit = 164.79132
-        return earth_age / neptune_orbit
+        return float(f"{earth_age / neptune_orbit:.2f}")
