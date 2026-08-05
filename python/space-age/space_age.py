@@ -8,4 +8,6 @@ class SpaceAge:
     def __init__(self, seconds):
         self.seconds = seconds
 
-    
+    def _calculate_earth_age(self):
+        earth_year_in_seconds = 31557600
+        return self.seconds / earth_year_in_seconds
