@@ -4,6 +4,8 @@ class SpaceAge:
     Store an age in seconds and provide methods to calculate
     the equivalent age on each planet.
     """
-    
+
     def __init__(self, seconds):
-        pass
+        self.seconds = seconds
+
+    
