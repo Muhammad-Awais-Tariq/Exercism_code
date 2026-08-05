@@ -77,4 +77,7 @@ class SpaceAge:
         Returns:
             float: The person's age in Saturn years.
         """                    
-         
+
+        earth_age = self._calculate_earth_age()
+        Saturn_orbit = 29.447498
+        return earth_age / Saturn_orbit             
