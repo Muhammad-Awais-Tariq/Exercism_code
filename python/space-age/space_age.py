@@ -62,5 +62,9 @@ class SpaceAge:
 
         Returns:
             float: The person's age in Jupiter years.
-        """        
+        """      
+
+        earth_age = self._calculate_earth_age()
+        Jupiter_orbit = 11.862615
+        return earth_age / Jupiter_orbit             
          
