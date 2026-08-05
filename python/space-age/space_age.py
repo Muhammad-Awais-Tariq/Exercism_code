@@ -20,3 +20,13 @@ class SpaceAge:
         """
 
         return self._calculate_earth_age()
+
+    def on_mercury(self):
+        """Calculate the person's age in Mercury years.
+
+        Returns:
+            float: The person's age in Mercury years.
+        """
+
+
+
