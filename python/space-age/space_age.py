@@ -92,4 +92,12 @@ class SpaceAge:
 
         earth_age = self._calculate_earth_age()
         Uranus_orbit = 84.016846
-        return earth_age / Uranus_orbit        
+        return earth_age / Uranus_orbit    
+
+
+    def on_neptune(self):
+        """Calculate the person's age in Neptune years.
+
+        Returns:
+            float: The person's age in Neptune years.
+        """                        
