@@ -32,3 +32,10 @@ class SpaceAge:
         mercury_orbit = 0.2408467
         return earth_age / mercury_orbit
 
+    def on_venus():
+        """Calculate the person's age in Mercury years.
+
+        Returns:
+            float: The person's age in Mercury years.
+        """        
+
