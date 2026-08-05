@@ -8,9 +8,11 @@ class SpaceAge:
     def __init__(self, seconds):
         self.seconds = seconds
 
+
     def _calculate_earth_age(self):
         earth_year_in_seconds = 31557600
         return self.seconds / earth_year_in_seconds
+
 
     def on_earth(self):
         """Calculate the person's age in Earth years.
@@ -20,6 +22,7 @@ class SpaceAge:
         """
 
         return self._calculate_earth_age()
+
 
     def on_mercury(self):
         """Calculate the person's age in Mercury years.
@@ -32,6 +35,7 @@ class SpaceAge:
         mercury_orbit = 0.2408467
         return earth_age / mercury_orbit
 
+
     def on_venus(self):
         """Calculate the person's age in Mercury years.
 
@@ -40,4 +44,12 @@ class SpaceAge:
         """        
         earth_age = self._calculate_earth_age()
         Venus_orbit = 0.61519726
-        return earth_age / Venus_orbit        
+        return earth_age / Venus_orbit    
+
+    def on_mars(self):
+        """Calculate the person's age in Mars years.
+
+        Returns:
+            float: The person's age in Mars years.
+        """        
+         
