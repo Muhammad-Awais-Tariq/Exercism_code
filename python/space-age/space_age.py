@@ -80,4 +80,13 @@ class SpaceAge:
 
         earth_age = self._calculate_earth_age()
         Saturn_orbit = 29.447498
-        return earth_age / Saturn_orbit             
+        return earth_age / Saturn_orbit      
+
+
+    def on_Uranus(self):
+        """Calculate the person's age in Uranus years.
+
+        Returns:
+            float: The person's age in Uranus years.
+        """                    
+
