@@ -100,4 +100,8 @@ class SpaceAge:
 
         Returns:
             float: The person's age in Neptune years.
-        """                        
+        """                    
+
+        earth_age = self._calculate_earth_age()
+        Neptune_orbit = 164.79132
+        return earth_age / Neptune_orbit      
