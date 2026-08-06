@@ -12,9 +12,8 @@ def sum_of_multiples(limit, multiples):
     total_multiples = set()
 
     for multiple in multiples:
-        if multiple !=0:
-            for devisor in range(limit):
-                if devisor % multiple == 0 :
-                    total_multiples.add(devisor)
+        if multiple != 0:
+            for number in range(0, limit, multiple):
+                total_multiples.add(number)
 
     return sum(total_multiples)
