@@ -10,3 +10,5 @@ def add(moment):
     Returns:
         datetime: The date and time one gigasecond later.
     """
+
+    return moment + timedelta(seconds=1e6)
