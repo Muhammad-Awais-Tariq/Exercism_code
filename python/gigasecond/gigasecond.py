@@ -1,5 +1,5 @@
-
 from datetime import timedelta
+
 
 def add(moment):
     """Return the date and time one gigasecond after the given moment.
@@ -9,6 +9,6 @@ def add(moment):
 
     Returns:
         datetime: The date and time one gigasecond later.
-    """
 
-    return moment + timedelta(seconds=1e9)
+    """
+    return moment + timedelta(seconds=1_000_000_000)
