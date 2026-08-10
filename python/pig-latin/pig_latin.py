@@ -8,3 +8,9 @@ def translate(text):
         str: The translated text in Pig Latin.
     """
 
+    vowels = ["a" , "e" , "i" , "o" , "u"]
+    ay_words = ["xr" , "yt"]
+
+    if text[0] in vowels or text[0] in ay_words:
+        return f"{text}ay"
+
