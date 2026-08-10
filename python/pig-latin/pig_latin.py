@@ -11,6 +11,5 @@ def translate(text):
     vowels = ["a" , "e" , "i" , "o" , "u"]
     ay_words = ["xr" , "yt"]
 
-    if text[0] in vowels or text[0] in ay_words:
+    if text[0] in vowels or text[0:2] in ay_words:
         return f"{text}ay"
-
