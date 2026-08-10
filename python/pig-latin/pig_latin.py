@@ -24,7 +24,15 @@ def translate(text):
                     count += 1
                 else:
                     return f"{text[count+2:]}{text[:count+2]}ay"
-                
+
+    if text[0] not in vowels:
+        count = 0
+        for word in range(len(text)):
+            if text[word] not in vowels and text[word] != "y":
+                count += 1
+            else:
+                return f"{text[count:]}{text[:count]}ay"
+            
     count = 0
     for word in text:
         if word not in vowels:
