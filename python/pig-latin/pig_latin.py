@@ -13,3 +13,10 @@ def translate(text):
 
     if text[0] in vowels or text[0:2] in ay_words:
         return f"{text}ay"
+
+    count = 0
+    for word in text:
+        if word not in vowels:
+            count += 1
+        else:
+            return f"{text[count:]}{text[:count]}ay"
