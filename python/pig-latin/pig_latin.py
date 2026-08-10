@@ -8,34 +8,55 @@ def translate(text):
         str: The translated text in Pig Latin.
     """
 
-    vowels = ["a" , "e" , "i" , "o" , "u"]
-    ay_words = ["xr" , "yt"]
+    vowels = ["a", "e", "i", "o", "u"]
+    ay_words = ["xr", "yt"]
 
-    if text[0] in vowels or text[0:2] in ay_words:
-        return f"{text}ay"
+    translated_words = []
 
-    if text[0] not in vowels and "qu" in text:
-        if text[0:2] == "qu":
-            return f"{text[2:]}{text[:2]}ay"
-        else:
-            count = 0
-            for word in range(len(text)):
-                if text[word] != "q" and text[word+1] != "u":
-                    count += 1
-                else:
-                    return f"{text[count+2:]}{text[:count+2]}ay"
+    for word in text.split():
 
-    if text[0] not in vowels:
+        if word[0] in vowels or word[:2] in ay_words:
+            translated_words.append(f"{word}ay")
+            continue
+
+        qu_index = word.find("qu")
+
+        if qu_index != -1:
+            first_vowel = next(
+                (i for i, char in enumerate(word) if char in vowels),
+                len(word)
+            )
+
+            if qu_index <= first_vowel:
+                split_index = qu_index + 2
+                translated_words.append(
+                    f"{word[split_index:]}{word[:split_index]}ay"
+                )
+                continue
+
+        y_index = word.find("y")
+
+        if y_index > 0:
+            first_vowel = next(
+                (i for i, char in enumerate(word) if char in vowels),
+                len(word)
+            )
+
+            if y_index <= first_vowel:
+                translated_words.append(
+                    f"{word[y_index:]}{word[:y_index]}ay"
+                )
+                continue
+
         count = 0
-        for word in range(len(text)):
-            if text[word] not in vowels and text[word] != "y":
-                count += 1
-            else:
-                return f"{text[count:]}{text[:count]}ay"
-            
-    count = 0
-    for word in text:
-        if word not in vowels:
+
+        for char in word:
+            if char in vowels:
+                break
             count += 1
-        else:
-            return f"{text[count:]}{text[:count]}ay"
+
+        translated_words.append(
+            f"{word[count:]}{word[:count]}ay"
+        )
+
+    return " ".join(translated_words)
