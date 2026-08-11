@@ -7,3 +7,12 @@ def is_paired(input_string):
     Returns:
         bool: True if all brackets are balanced, otherwise False.
     """
+
+    if not input_string:
+        return True
+
+    bracket_match = {
+        "{" : "}",
+        "[" : "]",
+        "(" : ")"
+    }
