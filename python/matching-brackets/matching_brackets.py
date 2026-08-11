@@ -17,12 +17,19 @@ def is_paired(input_string):
         "(" : ")"
     }
 
-    bracket_count = 0
+    stack = []
 
     for char in input_string:
-        if char in bracket_match.keys():
-            bracket_count += 1
-        elif char in bracket_match.values():
-            bracket_count -= 1
+        if char in bracket_match:
+            stack.append(char)
 
-    return True if bracket_count == 0 else False
+        elif char in bracket_match.values():
+            if not stack:
+                return False
+
+            if bracket_match[stack[-1]] == char:
+                stack.pop()
+            else:
+                return False
+
+    return True if len(stack) == 0 else False
