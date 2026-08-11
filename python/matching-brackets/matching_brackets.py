@@ -16,3 +16,13 @@ def is_paired(input_string):
         "[" : "]",
         "(" : ")"
     }
+
+    bracket_count = 0
+
+    for char in input_string:
+        if char in bracket_match.keys():
+            bracket_count += 1
+        elif char in bracket_match.values():
+            bracket_count -= 1
+
+    return True if bracket_count == 0 else False
