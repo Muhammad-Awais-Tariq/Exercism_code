@@ -48,5 +48,16 @@ def sublist(list_one, list_two):
     for i in range(size_b):
         partial_list = list_two[i:i+size_a]
 
-        if list_one == partial_list:
-            return SUBLIST
+        if len(partial_list) == size_a:
+            if list_one == partial_list:
+                return SUBLIST
+
+    for i in range(size_a):
+        partial_list = list_one[i:i+size_b]
+
+        if len(partial_list) == size_b:
+            if list_two == partial_list:
+                return SUPERLIST
+
+    return UNEQUAL
+        
