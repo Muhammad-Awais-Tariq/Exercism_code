@@ -38,3 +38,9 @@ def sublist(list_one, list_two):
 
     if list_one and not list_two:
         return SUPERLIST
+
+    if set(list_one).issubset(set(list_two)):
+        return SUBLIST
+
+
+    
