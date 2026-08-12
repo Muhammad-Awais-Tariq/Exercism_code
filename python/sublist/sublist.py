@@ -33,11 +33,11 @@ def sublist(list_one, list_two):
     if not list_one and not list_two:
         return EQUAL
 
+    if list_one == list_two:
+        return EQUAL
+
     if not list_one and list_two:
         return SUBLIST
 
     if list_one and not list_two:
         return SUPERLIST
-
-
-    
