@@ -29,3 +29,6 @@ def sublist(list_one, list_two):
         str: The relationship between the lists: EQUAL, SUBLIST,
             SUPERLIST, or UNEQUAL.
     """
+
+    if not list_one and not list_two:
+        return EQUAL
