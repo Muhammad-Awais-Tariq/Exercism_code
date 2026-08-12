@@ -30,6 +30,9 @@ def sublist(list_one, list_two):
             SUPERLIST, or UNEQUAL.
     """
 
+    size_a = len(list_one)
+    size_b = len(list_two)
+
     if not list_one and not list_two:
         return EQUAL
 
@@ -41,3 +44,9 @@ def sublist(list_one, list_two):
 
     if list_one and not list_two:
         return SUPERLIST
+
+    for i in range(size_b):
+        partial_list = list_two[i:i+size_a]
+
+        if list_one == partial_list:
+            return SUBLIST
