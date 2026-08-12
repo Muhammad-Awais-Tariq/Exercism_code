@@ -19,4 +19,13 @@ UNEQUAL = None
 
 
 def sublist(list_one, list_two):
-    pass
+    """Determine the relationship between two lists.
+
+    Parameters:
+        list_one (list): The first list to compare.
+        list_two (list): The second list to compare.
+
+    Returns:
+        str: The relationship between the lists: EQUAL, SUBLIST,
+            SUPERLIST, or UNEQUAL.
+    """
