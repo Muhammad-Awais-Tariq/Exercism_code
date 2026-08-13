@@ -1,3 +1,6 @@
+import string
+
+
 def encode(plain_text):
     """Encode plain text using the Atbash cipher.
 
@@ -14,16 +17,19 @@ def encode(plain_text):
         if char.isalpha():
             lowercase_char = char.lower()
             ascii_char = ord(lowercase_char)
-            position = (ascii_char - 97) + 1
-            new_position = (27 - position) + 97
-            if char.isupper():
-                output_str += chr(new_position).upper()
-            else:
-                output_str += chr(new_position)    
-        else:        
+            position = ascii_char - 97
+            new_position = (25 - position) + 97
+            output_str += chr(new_position)
+
+        elif char not in string.punctuation and char not in string.whitespace:
             output_str += char
 
-    return output_str
+    final_string = []
+
+    for index in range(0, len(output_str), 5):
+        final_string.append(output_str[index:index + 5])
+
+    return " ".join(final_string)
 
 
 def decode(ciphered_text):
@@ -42,13 +48,11 @@ def decode(ciphered_text):
         if char.isalpha():
             lowercase_char = char.lower()
             ascii_char = ord(lowercase_char)
-            position = (ascii_char - 97) + 1
-            new_position = (27 - position) + 97
-            if char.isupper():
-                output_str += chr(new_position).upper()
-            else:
-                output_str += chr(new_position)    
-        else:        
+            position = ascii_char - 97
+            new_position = (25 - position) + 97
+            output_str += chr(new_position)
+
+        elif char not in string.punctuation and char not in string.whitespace:
             output_str += char
 
     return output_str
