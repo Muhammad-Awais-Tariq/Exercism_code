@@ -35,3 +35,20 @@ def decode(ciphered_text):
     Returns:
         str: The decoded text.
     """
+
+    output_str = ""
+
+    for char in ciphered_text:
+        if char.isalpha():
+            lowercase_char = char.lower()
+            ascii_char = ord(lowercase_char)
+            position = (ascii_char - 97) + 1
+            new_position = (27 - position) + 97
+            if char.isupper():
+                output_str += chr(new_position).upper()
+            else:
+                output_str += chr(new_position)    
+        else:        
+            output_str += char
+
+    return output_str
