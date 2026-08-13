@@ -25,5 +25,13 @@ def encode(plain_text):
 
     return output_str
 
+
 def decode(ciphered_text):
-    pass
+    """Decode ciphered text using the Atbash cipher.
+
+    Parameters:
+        ciphered_text (str): The ciphered text to decode.
+
+    Returns:
+        str: The decoded text.
+    """
