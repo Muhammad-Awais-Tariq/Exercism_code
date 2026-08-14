@@ -10,31 +10,24 @@ def rows(letter):
 
     letter_position = ord(letter) - 65
 
-    for i in range(letter_position+1):
-        for j in range(letter_position-i):
+    for rows in range(letter_position+1):
+        for first_column in range(letter_position-rows):
             print(" " , end=" ")
-        print(chr (i + 65) , end=" ")
+        print(chr (rows + 65) , end=" ")
+        for second_column in range(2 * rows - 1):
+            print(" " , end=" ")
+        if rows != 0:
+            print(chr (rows + 65) , end=" ")
         print()
 
-    # for i in range(5):
-    #     for j in range(5-i):
-    #         print("*" , end=" ")
-    #     for l in range(i):
-    #         print("-" , end=" ")
-    #     for m in range(i):
-    #         print("-" , end=" ")
-    #     for n in range(5-i):
-    #         print("*" , end=" ")
-    #     print()    
+    for rows in range(letter_position - 1 , -1 , -1):
+        for first_column in range(letter_position-rows):
+            print(" " , end=" ")
+        print(chr (rows + 65) , end=" ")
+        for second_column in range(2 * rows - 1):
+            print(" " , end=" ")
+        if rows != 0:
+            print(chr (rows + 65) , end=" ")
+        print()
 
-    # for i in range(6):
-    #     for l in range(i):
-    #         print("*" , end=" ")
-    #     for j in range(5-i):
-    #         print("-" , end=" ")
-    #     for m in range(5-i):
-    #         print("-" , end=" ")
-    #     for l in range(i):
-    #         print("*" , end=" ")            
-    #     print()
 rows("E")
