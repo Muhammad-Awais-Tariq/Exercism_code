@@ -8,9 +8,13 @@ def rows(letter):
         str: The diamond pattern.
     """
 
-    letter_position = ord(letter) - 64
-    letter_formed =  chr (letter_position + 64)
+    letter_position = ord(letter) - 65
 
+    for i in range(letter_position+1):
+        for j in range(letter_position-i):
+            print(" " , end=" ")
+        print(chr (i + 65) , end=" ")
+        print()
 
     # for i in range(5):
     #     for j in range(5-i):
