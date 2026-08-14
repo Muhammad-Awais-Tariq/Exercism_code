@@ -20,6 +20,8 @@ def rows(letter):
             row += " "
         if rows != 0:
             row += chr (rows + 65)
+        for first_column in range(letter_position-rows):
+            row += " "    
         result.append(row)
 
     for rows in range(letter_position - 1 , -1 , -1):
@@ -31,6 +33,8 @@ def rows(letter):
             row += " "
         if rows != 0:
             row += chr (rows + 65)
+        for first_column in range(letter_position-rows):
+            row += " "
         result.append(row)
 
-rows("E")
+    return result
