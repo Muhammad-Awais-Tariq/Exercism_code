@@ -8,26 +8,29 @@ def rows(letter):
         str: The diamond pattern.
     """
 
-    for i in range(5):
-        for j in range(5-i):
-            print("*" , end=" ")
-        for l in range(i):
-            print("-" , end=" ")
-        for m in range(i):
-            print("-" , end=" ")
-        for n in range(5-i):
-            print("*" , end=" ")
-        print()    
+    letter_position = ord(letter) - 64
+    letter_formed =  chr (letter_position + 64)
 
-    for i in range(6):
-        for l in range(i):
-            print("*" , end=" ")
-        for j in range(5-i):
-            print("-" , end=" ")
-        for m in range(5-i):
-            print("-" , end=" ")
-        for l in range(i):
-            print("*" , end=" ")            
-        print()
-        
-rows("a")
+
+    # for i in range(5):
+    #     for j in range(5-i):
+    #         print("*" , end=" ")
+    #     for l in range(i):
+    #         print("-" , end=" ")
+    #     for m in range(i):
+    #         print("-" , end=" ")
+    #     for n in range(5-i):
+    #         print("*" , end=" ")
+    #     print()    
+
+    # for i in range(6):
+    #     for l in range(i):
+    #         print("*" , end=" ")
+    #     for j in range(5-i):
+    #         print("-" , end=" ")
+    #     for m in range(5-i):
+    #         print("-" , end=" ")
+    #     for l in range(i):
+    #         print("*" , end=" ")            
+    #     print()
+rows("E")
