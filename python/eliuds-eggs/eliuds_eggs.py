@@ -7,3 +7,5 @@ def egg_count(display_value):
     Returns:
         int: The number of 1 bits in the binary representation.
     """
+    
+    return list(bin(display_value)[2:]).count("1")
