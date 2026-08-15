@@ -8,5 +8,13 @@ def egg_count(display_value):
         int: The number of 1 bits in the binary representation.
     """
 
-    if display_value == 0:
-        return 0
+    count = 0
+    while display_value > 0:
+        remainder = display_value % 2
+
+        if remainder == 1:
+            count += 1
+
+        display_value = display_value // 2
+
+    return count
