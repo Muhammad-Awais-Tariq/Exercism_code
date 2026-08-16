@@ -31,12 +31,12 @@ def proteins(strand):
     amino_acids = []
 
     for nucleotide in range(0 , len(strand) , 3):
-        condon = strand[nucleotide : nucleotide + 3]
+        codon = strand[nucleotide : nucleotide + 3]
 
-        if condon in codon_translation:
-            if codon_translation[condon] == "STOP":
+        if codon in codon_translation:
+            if codon_translation[codon] == "STOP":
                 return amino_acids
 
-            amino_acids.append(codon_translation[condon])
+            amino_acids.append(codon_translation[codon])
 
     return amino_acids
