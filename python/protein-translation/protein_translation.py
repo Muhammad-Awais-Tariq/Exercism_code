@@ -28,15 +28,15 @@ def proteins(strand):
         "UGA": "STOP",
     }
 
-    Amino_acids = []
+    amino_acids = []
 
     for nucleotide in range(0 , len(strand) , 3):
         condon = strand[nucleotide : nucleotide + 3]
 
-        if condon in codon_translation.keys():
+        if condon in codon_translation:
             if codon_translation[condon] == "STOP":
-                return Amino_acids
+                return amino_acids
 
-            Amino_acids.append(codon_translation[condon])
+            amino_acids.append(codon_translation[condon])
 
-    return Amino_acids
+    return amino_acids
