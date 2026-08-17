@@ -22,6 +22,5 @@ def factors(value):
 
     if required_number > 1:
         all_factors.append(required_number)
-        
-    return all_factors
 
+    return all_factors
