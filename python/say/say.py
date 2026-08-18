@@ -29,13 +29,16 @@ def say(number):
     Returns:
         str: The alphabetic representation of the number.
     """
-    if n == 0:
+    if number == 0:
         return "zero"
+    
+    if number < 0 or number > 999_999_999_999:
+        raise ValueError("input out of range")
 
-    billions, n = divmod(n, 1_000_000_000)
-    millions, n = divmod(n, 1_000_000)
-    thousands, n = divmod(n, 1_000)
-    rest = n
+    billions, number = divmod(number, 1_000_000_000)
+    millions, number = divmod(number, 1_000_000)
+    thousands, number = divmod(number, 1_000)
+    rest = number
 
     words = ""
     if billions:
