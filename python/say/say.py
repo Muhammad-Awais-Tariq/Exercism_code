@@ -29,3 +29,22 @@ def say(number):
     Returns:
         str: The alphabetic representation of the number.
     """
+    if n == 0:
+        return "zero"
+
+    billions, n = divmod(n, 1_000_000_000)
+    millions, n = divmod(n, 1_000_000)
+    thousands, n = divmod(n, 1_000)
+    rest = n
+
+    words = ""
+    if billions:
+        words += three_digit(billions) + " billion "
+    if millions:
+        words += three_digit(millions) + " million "
+    if thousands:
+        words += three_digit(thousands) + " thousand "
+    if rest:
+        words += three_digit(rest)
+
+    return words.strip()
