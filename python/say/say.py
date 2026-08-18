@@ -11,6 +11,15 @@ def two_digit(n):
     t, o = divmod(n, 10)
     return tens[t] + ("-" + ones[o] if o else "")
 
+def three_digit(n):
+    if n < 100:
+        return two_digit(n)
+    h, rem = divmod(n, 100)
+    result = ones[h] + " hundred"
+    if rem:
+        result += " " + two_digit(rem)
+    return result
+
 def say(number):
     """Convert a number into its alphabetic representation.
 
