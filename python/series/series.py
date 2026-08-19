@@ -23,10 +23,7 @@ def slices(series, length):
 
     final_elment = []
 
-    for element in range(len(series)):
-        try:
-            final_elment.append(series[element:element+length])
-        except IndexError:
-            break
+    for element in range(len(series) - length + 1):
+        final_elment.append(series[element:element+length])
 
     return final_elment
