@@ -20,3 +20,13 @@ def slices(series, length):
 
     if length < 0:
         raise ValueError("slice length cannot be negative")
+
+    final_elment = []
+
+    for element in range(len(series)):
+        try:
+            final_elment.append(series[element:element+length])
+        except IndexError:
+            break
+
+    return final_elment
