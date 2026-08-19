@@ -8,3 +8,15 @@ def slices(series, length):
     Returns:
         list: A list containing the consecutive slices.
     """
+
+    if not series:
+        raise ValueError("series cannot be empty")
+    
+    if length == 0:
+        raise ValueError("slice length cannot be zero")
+
+    if length > len(series):
+        raise ValueError("slice length cannot be greater than series length")
+
+    if length < 0:
+        raise ValueError("slice length cannot be negative")
