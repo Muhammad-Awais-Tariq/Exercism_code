@@ -1,6 +1,12 @@
 def decode(string):
-    pass
+    """Decode a run-length encoded string.
 
+    Parameters:
+        string (str): The string to decode.
+
+    Returns:
+        str: The decoded string.
+    """
 
 def encode(string):
     """Encode a string using run-length encoding.
