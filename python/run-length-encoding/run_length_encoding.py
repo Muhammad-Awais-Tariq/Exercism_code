@@ -3,4 +3,11 @@ def decode(string):
 
 
 def encode(string):
-    pass
+    """Encode a string using run-length encoding.
+
+    Parameters:
+        string (str): The string to encode.
+
+    Returns:
+        str: The run-length encoded string.
+    """
