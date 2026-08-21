@@ -38,4 +38,6 @@ def prime(number):
         ValueError: If number is less than 1.
     """
 
-    pass
+    if number <= 0:
+        raise ValueError('there is no zeroth prime')
+    
