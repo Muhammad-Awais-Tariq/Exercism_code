@@ -40,4 +40,13 @@ def prime(number):
 
     if number <= 0:
         raise ValueError('there is no zeroth prime')
-    
+
+    primes = []
+    prime = 2
+
+    while len(primes) != number:
+        if is_prime(prime):
+            primes.append(prime)
+        prime +=1
+
+    return primes
