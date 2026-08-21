@@ -9,6 +9,21 @@ def is_prime(number):
         bool: True if the number is prime, False otherwise.
     """
 
+    if number < 2:
+        return False
+
+    if number == 2:
+        return True
+
+    if number % 2 == 0:
+        return False
+
+    for devisor in range(3 , int(number ** 0.5) + 1 , 2 ):
+        if number % devisor == 0:
+            return False
+
+    return True
+
 
 def prime(number):
     """Return the nth prime number.
