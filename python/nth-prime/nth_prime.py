@@ -1,3 +1,15 @@
+
+def is_prime(number):
+    """Check whether the given number is prime.
+
+    Parameters:
+        number (int): The number to check.
+
+    Returns:
+        bool: True if the number is prime, False otherwise.
+    """
+
+
 def prime(number):
     """Return the nth prime number.
 
@@ -10,3 +22,5 @@ def prime(number):
     Raises:
         ValueError: If number is less than 1.
     """
+
+    pass
