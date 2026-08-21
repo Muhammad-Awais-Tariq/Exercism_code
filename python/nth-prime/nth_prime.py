@@ -42,11 +42,11 @@ def prime(number):
         raise ValueError('there is no zeroth prime')
 
     primes = []
-    prime = 2
+    prime_num = 2
 
     while len(primes) != number:
-        if is_prime(prime):
-            primes.append(prime)
-        prime +=1
+        if is_prime(prime_num):
+            primes.append(prime_num)
+        prime_num +=1
 
-    return primes
+    return primes[-1]
