@@ -26,3 +26,10 @@ def roman(number):
         400 : "CD",
         900 : "CM"        
     }
+
+    if number in special_map:
+        return special_map[number]
+
+    if number in roman_map:
+        return roman_map[number]
+    
