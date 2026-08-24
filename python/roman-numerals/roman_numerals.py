@@ -26,3 +26,15 @@ def roman(number):
 
     if number in roman_map:
         return roman_map[number]
+
+    temp_number = number
+    roman_keys = list(roman_map.keys())[::-1]
+    roman_numeral = []
+
+    while temp_number != 0:
+        for number in roman_keys:
+            while temp_number - number >= 0:
+                temp_number -= number
+                roman_numeral.append(roman_map[number])
+
+    return "".join(roman_numeral)
