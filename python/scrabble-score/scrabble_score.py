@@ -17,3 +17,11 @@ def score(word: str) -> int:
         ("J", "X"): 8,
         ("Q", "Z"): 10,
     }
+
+    flatten = {k : v for key , v in letter_values.items() for k in key}
+
+    final_score = 0
+    for char in word:
+        final_score += flatten[char.upper()]
+
+    return final_score
