@@ -6,7 +6,7 @@ def proverb(*items, qualifier=None):
         qualifier (str, optional): An optional word added to the final line.
 
     Returns:
-        str: The generated proverb.
+        list: The generated proverb.
     """
 
     if not items:
