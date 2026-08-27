@@ -8,3 +8,6 @@ def proverb(*items, qualifier=None):
     Returns:
         str: The generated proverb.
     """
+
+    if not items:
+        return []
