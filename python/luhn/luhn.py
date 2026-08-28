@@ -26,4 +26,4 @@ class Luhn:
         for idx in range(len(num) - 2 , -1 , -2):
             num[idx] = int(num[idx]) ** 2
 
-        return sum(num) % 2 == 0
+        return sum(num) % 10 == 0
