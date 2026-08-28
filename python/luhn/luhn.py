@@ -9,5 +9,10 @@ class Luhn:
             ValueError: If card_num cannot be converted to an integer. 
         """
 
+        try:
+            self.card_num = int(card_num.replace(" " , ""))
+        except ValueError:
+            raise("Please enter the integer value.")
+
     def valid(self):
         pass
