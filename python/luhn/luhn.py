@@ -24,6 +24,10 @@ class Luhn:
             return False
 
         for idx in range(len(num) - 2 , -1 , -2):
-            num[idx] = int(num[idx]) ** 2
+            current_num =  int(num[idx]) ** 2
+            if current_num > 9:
+                current_num -= 9
+
+            num[idx] = current_num
 
         return sum(num) % 10 == 0
