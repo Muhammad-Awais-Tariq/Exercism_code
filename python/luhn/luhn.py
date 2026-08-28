@@ -17,3 +17,13 @@ class Luhn:
         Returns: 
             bool: True if the card number is valid, otherwise False. 
         """
+
+        num = list(map(int , self.card_num))
+        
+        if len(num) <= 1:
+            return False
+
+        for idx in range(len(num) - 2 , -1 , -2):
+            num[idx] = int(num[idx]) ** 2
+
+        return sum(num) % 2 == 0
