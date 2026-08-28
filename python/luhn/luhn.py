@@ -9,10 +9,7 @@ class Luhn:
             ValueError: If card_num cannot be converted to an integer. 
         """
 
-        try:
-            self.card_num = int(card_num.replace(" " , ""))
-        except ValueError:
-            raise("Please enter the integer value.")
+        self.card_num = card_num.replace(" " , "")
         
     def valid(self): 
         """Determine whether the card number is valid according to the Luhn algorithm. 
@@ -20,9 +17,3 @@ class Luhn:
         Returns: 
             bool: True if the card number is valid, otherwise False. 
         """
-
-        num = self.card_num
-
-        if num <= 1:
-            return False
-
