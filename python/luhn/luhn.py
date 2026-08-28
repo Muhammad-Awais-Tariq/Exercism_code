@@ -18,13 +18,17 @@ class Luhn:
             bool: True if the card number is valid, otherwise False. 
         """
 
-        num = list(map(int , self.card_num))
+        try:
+            num = list(map(int , self.card_num))
+
+        except ValueError:
+            return False
         
         if len(num) <= 1:
             return False
 
         for idx in range(len(num) - 2 , -1 , -2):
-            current_num =  int(num[idx]) ** 2
+            current_num =  int(num[idx]) * 2
             if current_num > 9:
                 current_num -= 9
 
