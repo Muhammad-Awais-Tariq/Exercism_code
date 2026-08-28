@@ -13,6 +13,10 @@ class Luhn:
             self.card_num = int(card_num.replace(" " , ""))
         except ValueError:
             raise("Please enter the integer value.")
-
-    def valid(self):
-        pass
+        
+    def valid(self): 
+        """Determine whether the card number is valid according to the Luhn algorithm. 
+        
+        Returns: 
+            bool: True if the card number is valid, otherwise False. 
+        """
