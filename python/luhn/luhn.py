@@ -20,3 +20,9 @@ class Luhn:
         Returns: 
             bool: True if the card number is valid, otherwise False. 
         """
+
+        num = self.card_num
+
+        if num <= 1:
+            return False
+
