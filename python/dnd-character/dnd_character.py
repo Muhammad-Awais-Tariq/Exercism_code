@@ -3,4 +3,11 @@ class Character:
         pass
 
 def modifier(value):
-    pass
+    """Modifies the given value.
+
+    Parameters:
+        value (int): The value to be modified.
+
+    Returns:
+        int: The modified value.
+    """
