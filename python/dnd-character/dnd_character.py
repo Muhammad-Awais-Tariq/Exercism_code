@@ -11,3 +11,5 @@ def modifier(value):
     Returns:
         int: The modified value.
     """
+
+    return (value - 10 ) // 2
