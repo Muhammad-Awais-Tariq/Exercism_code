@@ -4,7 +4,14 @@ class Character:
     def __init__(self):
         """Initializes the character's abilities and hitpoints.
         """
-        
+
+        self.strength = self.ability()
+        self.dexterity = self.ability()
+        self.constitution = self.ability()
+        self.intelligence = self.ability()
+        self.wisdom = self.ability()
+        self.charisma = self.ability()
+        self.hitpoints = 10 + modifier(self.constitution)
 
     def ability(self):
         """Randomly generates an ability score.
