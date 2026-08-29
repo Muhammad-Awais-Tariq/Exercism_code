@@ -2,7 +2,9 @@ import random
 
 class Character:
     def __init__(self):
-        pass
+        """Initializes the character's abilities and hitpoints.
+        """
+        
 
     def ability(self):
         """Randomly generates an ability score.
