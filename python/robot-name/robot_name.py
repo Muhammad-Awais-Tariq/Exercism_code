@@ -8,10 +8,11 @@ class Robot:
 
     def __init__(self):
         """
-        Intilizes the robot name attribute.
+        Initializes the robot name attribute.
         """
 
         self.robot_name = None
+
 
     def name(self):
         """Return the robot's name, generating one if necessary.
@@ -32,12 +33,11 @@ class Robot:
                 self.all_names.add(random_name)
                 return self.robot_name
 
+
     def reset(self):
         """
-        Resets the robot name so its eligible for new one.
+        Resets the robot name so its eligible for a new one
         """
-        
+
         if self.robot_name:
             self.robot_name = None
-                
-        
