@@ -31,5 +31,10 @@ class Robot:
                 self.robot_name = random_name
                 self.all_names.add(random_name)
                 return self.robot_name
+
+    def reset(self):
+        """
+        Resets the robot name so its eligible for new one.
+        """
                 
         
