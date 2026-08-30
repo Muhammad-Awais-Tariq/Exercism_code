@@ -7,7 +7,9 @@ class Robot:
     all_names = set()
 
     def __init__(self):
-        pass
+        """
+        Intilizes the robot name attribute.
+        """
 
     def name(self):
         """Return the robot's name, generating one if necessary.
