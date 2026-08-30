@@ -36,5 +36,8 @@ class Robot:
         """
         Resets the robot name so its eligible for new one.
         """
+        
+        if self.robot_name:
+            self.robot_name = None
                 
         
