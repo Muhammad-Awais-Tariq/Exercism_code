@@ -13,7 +13,7 @@ class Robot:
 
         self.robot_name = None
 
-
+    @property
     def name(self):
         """Return the robot's name, generating one if necessary.
 
