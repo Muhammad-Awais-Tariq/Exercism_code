@@ -11,6 +11,8 @@ class Robot:
         Intilizes the robot name attribute.
         """
 
+        self.robot_name = None
+
     def name(self):
         """Return the robot's name, generating one if necessary.
 
