@@ -3,7 +3,12 @@ import random
 import string
 
 class Robot:
-
+    """Represents a robot with a unique randomly generated name. 
+    
+    A robot name consists of two uppercase letters followed by three digits. 
+    Names are tracked to ensure that each robot receives a unique name. 
+    """
+    
     all_names = set()
 
     def __init__(self):
