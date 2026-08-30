@@ -1,4 +1,11 @@
+
+import random
+import string
+
 class Robot:
+
+    all_names = set()
+
     def __init__(self):
         pass
 
@@ -8,3 +15,17 @@ class Robot:
         Returns:
             str: The robot's name.
         """
+
+        if self.robot_name:
+            return self.robot_name
+
+        while True:
+            random_name = "".join(random.choices(string.ascii_uppercase , k = 2))
+            random_name += str(random.randint(100 , 999 ))
+
+            if random_name not in self.all_names:
+                self.robot_name = random_name
+                self.all_names.add(random_name)
+                return self.robot_name
+                
+        
