@@ -66,7 +66,7 @@ class PhoneNumber:
         temp_num = f"({self.area_code})-"
 
         for i in range(3 , len(self.number)):
-            if i == 7:
+            if i == 6:
                 temp_num += "-"
                 temp_num += self.number[i]
             else:
