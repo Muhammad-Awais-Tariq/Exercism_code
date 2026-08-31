@@ -1,15 +1,24 @@
-
 import string
 
+
 class PhoneNumber:
+    """Represent and validate a North American phone number."""
+
     def __init__(self, number):
-        """
-        Constuctor for storing the number.
+        """Initialize a phone number after validating and cleaning it.
+
+        Args:
+            number (str): The phone number to clean and validate.
+
+        Raises:
+            ValueError: If the number contains invalid characters, has an
+                invalid length, or contains an invalid area or exchange code.
         """
 
         temp_num = number
         new_num = ""
-        allowed_punctuations = set([" " , "-" , "." , "(" , ")" , "+"])
+
+        allowed_punctuations = {" ", "-", ".", "(", ")", "+"}
         all_punctuations = set(string.punctuation)
         all_letters = set(string.ascii_letters)
 
@@ -39,7 +48,8 @@ class PhoneNumber:
 
         if new_num[0] == "0":
             raise ValueError("area code cannot start with zero")
-        elif new_num[0] == "1":
+
+        if new_num[0] == "1":
             raise ValueError("area code cannot start with one")
 
         if new_num[3] == "0":
@@ -52,20 +62,15 @@ class PhoneNumber:
 
     @property
     def area_code(self):
-        """
-        Returns the area code the number
-        """
-
+        """Return the three-digit area code."""
         return self.number[:3]
 
     def pretty(self):
-        """
-        Returns the number in a pretty way
-        """
+        """Return the phone number in a formatted representation."""
 
         temp_num = f"({self.area_code})-"
 
-        for i in range(3 , len(self.number)):
+        for i in range(3, len(self.number)):
             if i == 6:
                 temp_num += "-"
                 temp_num += self.number[i]
