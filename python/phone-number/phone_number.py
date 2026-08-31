@@ -1,3 +1,5 @@
 class PhoneNumber:
     def __init__(self, number):
-        pass
+        """
+        Constuctor for storing the number.
+        """
