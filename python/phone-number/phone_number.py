@@ -49,3 +49,8 @@ class PhoneNumber:
             raise ValueError("exchange code cannot start with one")
 
         self.number = new_num
+
+    def area_code(self):
+        """
+        Returns the area code the number
+        """
