@@ -57,3 +57,19 @@ class PhoneNumber:
         """
 
         return self.number[:3]
+
+    def pretty(self):
+        """
+        Returns the number in a pretty way
+        """
+
+        temp_num = f"({self.area_code})-"
+
+        for i in range(3 , len(self.number)):
+            if i == 7:
+                temp_num += "-"
+                temp_num += self.number[i]
+            else:
+                temp_num += self.number[i]
+
+        return temp_num
