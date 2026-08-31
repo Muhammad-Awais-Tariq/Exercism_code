@@ -50,7 +50,10 @@ class PhoneNumber:
 
         self.number = new_num
 
+    @property
     def area_code(self):
         """
         Returns the area code the number
         """
+
+        return self.number[:3]
