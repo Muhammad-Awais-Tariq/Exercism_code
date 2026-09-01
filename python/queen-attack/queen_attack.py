@@ -7,5 +7,8 @@ class Queen:
             coloumn (int): The column of the queen.
         """
 
+        self.row = row
+        self.column = column
+
     def can_attack(self, another_queen):
         pass
