@@ -34,13 +34,13 @@ class Queen:
         
         """
 
-        if self == another_queen:
+        if self.row == another_queen.row and self.column == another_queen.column:
             raise ValueError("Invalid queen position: both queens in the same square")
 
         if self.column == another_queen.column or self.row == another_queen.row:
             return True
 
-        if abs(self.row - self.column) == abs(another_queen.row - another_queen.column):
+        if abs(self.row - another_queen.row) == abs(  self.column - another_queen.column):
             return True
 
         return False
