@@ -24,4 +24,12 @@ class Queen:
 
 
     def can_attack(self, another_queen):
-        pass
+        """Checks if two queen can attack each other or not.
+
+        Parameters:
+            second_queen(Queen) : Other queen object.
+        
+        Returns:
+            bool : True if queen can attack else false
+        
+        """
