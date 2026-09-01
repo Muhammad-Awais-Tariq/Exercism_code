@@ -34,6 +34,9 @@ class Queen:
         
         """
 
+        if self == another_queen:
+            raise ValueError("Invalid queen position: both queens in the same square")
+
         if self.column == another_queen.column or self.row == another_queen.row:
             return True
 
