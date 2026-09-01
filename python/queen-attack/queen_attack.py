@@ -33,3 +33,11 @@ class Queen:
             bool : True if queen can attack else false
         
         """
+
+        if self.column == another_queen.column or self.row == another_queen.row:
+            return True
+
+        if abs(self.row - self.column) == abs(another_queen.row - another_queen.column):
+            return True
+
+        return False
