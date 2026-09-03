@@ -3,7 +3,7 @@
 YACHT = None
 ONES = 1
 TWOS = 2
-THREES = None
+THREES = 3
 FOURS = None
 FIVES = None
 SIXES = None
@@ -30,3 +30,6 @@ def score(dice, category):
 
     if category == 2:
         return 2 * dice.count(2)
+
+    if category == 3:
+        return 3 * dice.count(3)
