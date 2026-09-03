@@ -11,7 +11,7 @@ FULL_HOUSE = None
 FOUR_OF_A_KIND = None
 LITTLE_STRAIGHT = None
 BIG_STRAIGHT = None
-CHOICE = None
+CHOICE = 0
 
 
 def score(dice, category):
@@ -27,6 +27,9 @@ def score(dice, category):
 
     if category in [1 ,2 ,3 ,4 ,5 ,6]:
         return category * dice.count(category)
+
+    if category == 0:
+        return sum(dice)
 
     value_counts = {}
 
