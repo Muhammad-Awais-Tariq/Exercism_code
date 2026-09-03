@@ -31,6 +31,9 @@ def score(dice, category):
     if category == 0:
         return sum(dice)
 
+    if len(set(dice)) == 1:
+        return 50
+    
     value_counts = {}
 
     for die in dice:
