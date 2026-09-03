@@ -45,3 +45,6 @@ def score(dice, category):
 
     if sorted(dice) == [1,2,3,4,5]:
         return 30
+
+    if sorted(dice) == [2, 3, 4, 5, 6]:
+        return 30
