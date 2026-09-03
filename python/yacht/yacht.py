@@ -5,7 +5,7 @@ ONES = 1
 TWOS = 2
 THREES = 3
 FOURS = 4
-FIVES = None
+FIVES = 5
 SIXES = None
 FULL_HOUSE = None
 FOUR_OF_A_KIND = None
@@ -36,3 +36,6 @@ def score(dice, category):
 
     if category == 4:
         return 4 * dice.count(4)    
+
+    if category == 5:
+        return 5 * dice.count(5)    
