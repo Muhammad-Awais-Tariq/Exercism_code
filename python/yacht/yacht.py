@@ -42,3 +42,6 @@ def score(dice, category):
     for key , value in value_counts.items():
         if value >= 4:
             return key * 4
+
+    if sorted(dice) == [1,2,3,4,5]:
+        return 30
