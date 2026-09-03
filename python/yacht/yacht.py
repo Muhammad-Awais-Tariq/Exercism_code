@@ -6,7 +6,7 @@ TWOS = 2
 THREES = 3
 FOURS = 4
 FIVES = 5
-SIXES = None
+SIXES = 6
 FULL_HOUSE = None
 FOUR_OF_A_KIND = None
 LITTLE_STRAIGHT = None
@@ -25,17 +25,5 @@ def score(dice, category):
         int: The total score.
     """
 
-    if category == 1:
-        return dice.count(1)
-
-    if category == 2:
-        return 2 * dice.count(2)
-
-    if category == 3:
-        return 3 * dice.count(3)
-
-    if category == 4:
-        return 4 * dice.count(4)    
-
-    if category == 5:
-        return 5 * dice.count(5)    
+    if category in [1 ,2 ,3 ,4 ,5 ,6]:
+        return category * dice.count(category)
