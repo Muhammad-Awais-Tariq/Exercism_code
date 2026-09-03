@@ -1,16 +1,15 @@
-# Score categories.
-# Change the values as you see fit.
-YACHT = None
+
+YACHT = 7
 ONES = 1
 TWOS = 2
 THREES = 3
 FOURS = 4
 FIVES = 5
 SIXES = 6
-FULL_HOUSE = None
-FOUR_OF_A_KIND = None
-LITTLE_STRAIGHT = None
-BIG_STRAIGHT = None
+FULL_HOUSE = 8
+FOUR_OF_A_KIND = 9
+LITTLE_STRAIGHT = 10
+BIG_STRAIGHT = 11
 CHOICE = 0
 
 
@@ -54,3 +53,5 @@ def score(dice, category):
 
     if sorted(dice) == [2, 3, 4, 5, 6]:
         return 30
+
+    return 0
