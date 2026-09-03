@@ -1,7 +1,7 @@
 # Score categories.
 # Change the values as you see fit.
 YACHT = None
-ONES = None
+ONES = 1
 TWOS = None
 THREES = None
 FOURS = None
@@ -24,3 +24,6 @@ def score(dice, category):
     Return:
         int: The total score.
     """
+
+    if category == 1:
+        return dice.count(1)
