@@ -4,7 +4,7 @@ YACHT = None
 ONES = 1
 TWOS = 2
 THREES = 3
-FOURS = None
+FOURS = 4
 FIVES = None
 SIXES = None
 FULL_HOUSE = None
@@ -33,3 +33,6 @@ def score(dice, category):
 
     if category == 3:
         return 3 * dice.count(3)
+
+    if category == 4:
+        return 4 * dice.count(4)    
