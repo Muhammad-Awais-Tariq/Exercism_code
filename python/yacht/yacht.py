@@ -2,7 +2,7 @@
 # Change the values as you see fit.
 YACHT = None
 ONES = 1
-TWOS = None
+TWOS = 2
 THREES = None
 FOURS = None
 FIVES = None
@@ -27,3 +27,6 @@ def score(dice, category):
 
     if category == 1:
         return dice.count(1)
+
+    if category == 2:
+        return 2 * dice.count(2)
