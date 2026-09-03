@@ -1,3 +1,4 @@
+"""Scoring functions for the Yacht dice game."""
 
 YACHT = 7
 ONES = 1
@@ -12,27 +13,27 @@ LITTLE_STRAIGHT = 10
 BIG_STRAIGHT = 11
 CHOICE = 0
 
-
 def score(dice, category):
-    """Returns the score based on the dice and category.
+    """Calculate the score for a dice roll and category.
 
+    ```
     Parameters:
-        dice (list): The dice roll.
-        category (int): The category on the basic of which we want calculation.
-    
-    Return:
-        int: The total score.
-    """
+        dice (list): Five dice values.
+        category (int): The category to score.
 
-    if category in [1 ,2 ,3 ,4 ,5 ,6]:
+    Returns:
+        int: The score for the given dice and category.
+    """
+    
+    if category in [ONES, TWOS, THREES, FOURS, FIVES, SIXES]:
         return category * dice.count(category)
 
-    if category == 0:
+    if category == CHOICE:
         return sum(dice)
 
-    if len(set(dice)) == 1:
-        return 50
-    
+    if category == YACHT:
+        return 50 if len(set(dice)) == 1 else 0
+
     value_counts = {}
 
     for die in dice:
@@ -41,17 +42,25 @@ def score(dice, category):
         else:
             value_counts[die] = 1
 
-    if list(value_counts.values()) == [2 ,3] or list(value_counts.values()) == [3 , 2]:
-        return sum(dice)
+    if category == FULL_HOUSE:
+        counts = list(value_counts.values())
 
-    for key , value in value_counts.items():
-        if value >= 4:
-            return key * 4
+        if counts == [2, 3] or counts == [3, 2]:
+            return sum(dice)
 
-    if sorted(dice) == [1,2,3,4,5]:
-        return 30
+        return 0
 
-    if sorted(dice) == [2, 3, 4, 5, 6]:
-        return 30
+    if category == FOUR_OF_A_KIND:
+        for value, count in value_counts.items():
+            if count >= 4:
+                return value * 4
+
+        return 0
+
+    if category == LITTLE_STRAIGHT:
+        return 30 if sorted(dice) == [1, 2, 3, 4, 5] else 0
+
+    if category == BIG_STRAIGHT:
+        return 30 if sorted(dice) == [2, 3, 4, 5, 6] else 0
 
     return 0
