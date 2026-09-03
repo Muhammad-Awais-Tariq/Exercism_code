@@ -15,4 +15,12 @@ CHOICE = None
 
 
 def score(dice, category):
-    pass
+    """Returns the score based on the dice and category.
+
+    Parameters:
+        dice (list): The dice roll.
+        category (int): The category on the basic of which we want calculation.
+    
+    Return:
+        int: The total score.
+    """
