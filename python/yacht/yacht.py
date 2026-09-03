@@ -38,3 +38,7 @@ def score(dice, category):
 
     if list(value_counts.values()) == [2 ,3] or list(value_counts.values()) == [3 , 2]:
         return sum(dice)
+
+    for key , value in value_counts.items():
+        if value >= 4:
+            return key * 4
