@@ -27,3 +27,14 @@ def score(dice, category):
 
     if category in [1 ,2 ,3 ,4 ,5 ,6]:
         return category * dice.count(category)
+
+    value_counts = {}
+
+    for die in dice:
+        if die in value_counts:
+            value_counts[die] += 1
+        else:
+            value_counts[die] = 1
+
+    if list(value_counts.values()) == [2 ,3] or list(value_counts.values()) == [3 , 2]:
+        return sum(dice)
