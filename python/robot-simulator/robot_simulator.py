@@ -20,4 +20,34 @@ class Robot:
         self.direction = direction
         self.coordinates = (x_pos , y_pos)
 
-    
+    def move(self , moves):
+        """Moves the robot based on the given moves.
+
+        Parameters:
+            moves(str) : The string containing all the moves.
+        """
+        
+        for move in moves:
+            if move == "R":
+                if self.direction != 3:
+                    self.direction += 1
+                else:
+                    self.direction = 0
+
+            if move == "L":
+                if self.direction != 0:
+                    self.direction -= 1
+                else:
+                    self.direction = 3    
+
+            if move == "A":
+                x , y = self.coordinates
+                if self.direction == 0:
+                    self.coordinates = (x,y+1)        
+                elif self.direction == 1:
+                    self.coordinates = (x+1,y)    
+                elif self.direction == 2:
+                    self.coordinates = (x,y-1)   
+                else:
+                    self.coordinates = (x-1,y)    
+
