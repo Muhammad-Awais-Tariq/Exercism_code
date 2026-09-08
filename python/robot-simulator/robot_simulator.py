@@ -1,7 +1,7 @@
-EAST = None
-NORTH = None
-WEST = None
-SOUTH = None
+EAST = 1
+NORTH = 0
+WEST = 3
+SOUTH = 2
 
 
 class Robot:
@@ -16,4 +16,8 @@ class Robot:
             x_pos : The x position.
             y_post: The y position
         """
-        pass
+
+        self.direction = direction
+        self.coordinates = (x_pos , y_pos)
+
+    
