@@ -34,7 +34,17 @@ class School:
         return final_students
 
     def grade(self, grade_number):
-        pass
+
+        if grade_number not in self.students:
+            return []
+        else:
+            student_names_sorted = []
+            sorted_students = sorted(self.students[grade_number])
+            for stn in sorted_students:
+                student_names_sorted.append(stn)
+
+            return student_names_sorted
+
 
     def added(self):
         pass
