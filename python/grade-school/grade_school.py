@@ -5,7 +5,7 @@ class School:
         Constructor
         """
         self.students = {}
-        self.admitted = False
+        self.admitted = []
 
     def add_student(self, name, grade):
         """Adds the students to the school dict
@@ -18,9 +18,9 @@ class School:
                 self.students[grade].append(name)
             else:
                 self.students[grade] = [name]
-            self.admitted = True
+            self.admitted.append(True)
         else:
-            self.admitted = False
+            self.admitted.append(False)
         
 
     def roster(self):
