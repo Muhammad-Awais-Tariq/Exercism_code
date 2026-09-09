@@ -1,4 +1,5 @@
 class School:
+    """ The school class. """
     def __init__(self):
         pass
 
