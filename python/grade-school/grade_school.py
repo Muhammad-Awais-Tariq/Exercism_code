@@ -20,7 +20,18 @@ class School:
         
 
     def roster(self):
-        pass
+
+        sorted_students = sorted(self.students.items() , key= lambda x : x[0])
+
+        final_students = []
+
+        for student in sorted_students:
+            alphabetical_names = sorted(student[1])
+            for students in alphabetical_names:
+                final_students.append(students)
+
+
+        return final_students
 
     def grade(self, grade_number):
         pass
