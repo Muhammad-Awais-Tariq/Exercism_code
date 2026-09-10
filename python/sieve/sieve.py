@@ -1,25 +1,30 @@
 def primes(limit):
-    """find the prime up to given number using sieve algorithm.
+    """Find all prime numbers up to the given limit using the Sieve algorithm.
 
     Parameters:
-        limit (int) : the upper limit.
+        limit (int): The upper limit for finding prime numbers.
 
     Returns:
-        list : All the prime numbers.
+        list: A list containing all prime numbers up to the limit.
     """
-
     if limit < 2:
         return []
-    
-    primes = [num for num in range(2,limit+1)]
-    is_prime = [True] * len(primes)
 
-    for idx in range(len(primes)):
-       if is_prime[idx] == True:
-            for multiple in range(2 , limit):
-                if primes[idx] * multiple <= limit:
-                        is_prime[primes.index(primes[idx] * multiple)] = False
+    prime_numbers = [number for number in range(2, limit + 1)]
+    is_prime = [True] * len(prime_numbers)
+
+    for index in range(len(prime_numbers)):
+        if is_prime[index]:
+            for multiple in range(2, limit):
+                if prime_numbers[index] * multiple <= limit:
+                    is_prime[
+                        prime_numbers.index(prime_numbers[index] * multiple)
+                    ] = False
                 else:
                     break
 
-    return [primes[idx] for idx in range(len(primes)) if is_prime[idx] != False]
+    return [
+        prime_numbers[index]
+        for index in range(len(prime_numbers))
+        if is_prime[index]
+    ]
