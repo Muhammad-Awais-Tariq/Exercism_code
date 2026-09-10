@@ -1,2 +1,9 @@
 def primes(limit):
-    pass
+    """find the prime up to given number using sieve algorithm.
+
+    Parameters:
+        limit (int) : the upper limit.
+
+    Returns:
+        list : All the prime numbers.
+    """
