@@ -11,14 +11,15 @@ def primes(limit):
     if limit < 2:
         return []
     
-    primes = [2]
+    primes = [num for num in range(2,limit+1)]
+    is_prime = [True] * len(primes)
 
-    for num in range(3,limit+1):
-        is_prime = True
-        for prime in primes:
-            if num % prime == 0:
-                is_prime = False
-                break
+    for idx in range(len(primes)):
+       if is_prime[idx] == True:
+            for multiple in range(2 , limit):
+                if primes[idx] * multiple <= limit:
+                        is_prime[primes.index(primes[idx] * multiple)] = False
+                else:
+                    break
 
-        if is_prime:
-            primes.append(num)
+    return [primes[idx] for idx in range(len(primes)) if is_prime[idx] != False]
