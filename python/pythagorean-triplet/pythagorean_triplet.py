@@ -1,20 +1,21 @@
 def triplets_with_sum(number):
-    """Return the pythagorean triplet whose sum is equal to the given number.
+    """Return all Pythagorean triplets whose sum equals the given number.
 
-    Paramters:
-        number (int): The number which sum we want.
-    
+    Parameters:
+        number (int): The target sum of the Pythagorean triplets.
+
     Returns:
-        (list) : The numbers whose sum is equal to the given number 
+        list: A list of Pythagorean triplets whose elements sum to `number`.
     """
 
-    numbers = []
+    triplets = []
 
-    for a in range(1, number-3):
-        for b in range(a , number):
-            c = number - a - b
-            if c > b:
-                if (a ** 2) + (b ** 2) == (c** 2):
-                    numbers.append([a,b,c])
+    for first_side in range(1, number - 3):
+        for second_side in range(first_side, number):
+            third_side = number - first_side - second_side
 
-    return numbers
+            if third_side > second_side:
+                if (first_side ** 2) + (second_side ** 2) == third_side ** 2:
+                    triplets.append([first_side, second_side, third_side])
+
+    return triplets
