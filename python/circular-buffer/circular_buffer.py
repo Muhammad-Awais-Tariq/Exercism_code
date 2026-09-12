@@ -25,6 +25,7 @@ class CircularBuffer:
         self.buffer = [None for _ in range(capacity)]
         self.head = 0
         self.current = 0
+        self.tail = 0
 
     def read(self):
         """
@@ -41,7 +42,7 @@ class CircularBuffer:
 
         if self.head == len(self.buffer):
             self.head = 0
-            
+
         if self.current == 0:
             self.head = 0
 
@@ -49,7 +50,20 @@ class CircularBuffer:
 
 
     def write(self, data):
-        pass
+        """
+        Writes the element to the buffer.
+        """
+
+        if self.current == len(self.buffer):
+            raise BufferFullException("Circular buffer is full")
+
+        self.buffer[self.tail] = data
+        self.tail += 1
+        self.current += 1
+
+        if self.tail == len(self.buffer):
+            self.tail = 0
+
 
     def overwrite(self, data):
         pass
