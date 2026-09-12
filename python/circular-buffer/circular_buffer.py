@@ -5,7 +5,8 @@ class BufferFullException(BufferError):
 
     """
     def __init__(self, message):
-        pass
+        self.message = message
+        super().__init__(self.message)
 
 
 class BufferEmptyException(BufferError):
@@ -15,7 +16,8 @@ class BufferEmptyException(BufferError):
 
     """
     def __init__(self, message):
-        pass
+        self.message = message
+        super().__init__(self.message)
 
 
 class CircularBuffer:
