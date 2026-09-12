@@ -1,35 +1,54 @@
 class BufferFullException(BufferError):
-    """Exception raised when CircularBuffer is full.
+    """Exception raised when the circular buffer is full."""
 
-    message: explanation of the error.
-
-    """
     def __init__(self, message):
+        """Initialize the exception with an error message.
+
+        Parameters:
+            message (str): Explanation of the error.
+        """
+        
         self.message = message
         super().__init__(self.message)
 
 
 class BufferEmptyException(BufferError):
-    """Exception raised when CircularBuffer is empty.
+    """Exception raised when the circular buffer is empty."""
 
-    message: explanation of the error.
-
-    """
     def __init__(self, message):
+        """Initialize the exception with an error message.
+
+        Parameters:
+            message (str): Explanation of the error.
+        """
+
         self.message = message
         super().__init__(self.message)
 
 
 class CircularBuffer:
+    """Represent a fixed-size circular buffer."""
+
     def __init__(self, capacity):
+        """Initialize the circular buffer.
+
+        Parameters:
+            capacity (int): Maximum number of elements the buffer can hold.
+        """
+
         self.buffer = [None for _ in range(capacity)]
         self.head = 0
         self.current = 0
         self.tail = 0
 
     def read(self):
-        """
-        Reads the element from the buffer.
+        """Read and remove the oldest element from the buffer.
+
+        Returns:
+            object: The oldest element in the buffer.
+
+        Raises:
+            BufferEmptyException: If the buffer is empty.
         """
 
         if self.current == 0:
@@ -48,10 +67,14 @@ class CircularBuffer:
 
         return current_element
 
-
     def write(self, data):
-        """
-        Writes the element to the buffer.
+        """Write an element to the buffer.
+
+        Parameters:
+            data (object): The element to store in the buffer.
+
+        Raises:
+            BufferFullException: If the buffer is already full.
         """
 
         if self.current == len(self.buffer):
@@ -64,11 +87,13 @@ class CircularBuffer:
         if self.tail == len(self.buffer):
             self.tail = 0
 
-
     def overwrite(self, data):
+        """Write an element, replacing the oldest element if full.
+
+        Parameters:
+            data (object): The element to store in the buffer.
         """
-        Overwrites the data.
-        """
+
         if self.current == len(self.buffer):
             self.tail = self.head
             self.buffer[self.tail] = data
@@ -80,19 +105,15 @@ class CircularBuffer:
         else:
             self.buffer[self.tail] = data
             self.tail += 1
-            self.current += 1      
-            
+            self.current += 1
+
             if self.tail == len(self.buffer):
                 self.tail = 0
 
     def clear(self):
-        """
-        Clears the buffer.
-        """
-
+        """Remove all elements from the buffer and reset its state."""
+        
         self.head = 0
         self.current = 0
         self.tail = 0
-
         self.buffer = [None for _ in range(len(self.buffer))]
-        
