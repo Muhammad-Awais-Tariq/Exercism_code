@@ -69,4 +69,13 @@ class CircularBuffer:
         pass
 
     def clear(self):
-        pass
+        """
+        Clears the buffer.
+        """
+
+        self.head = 0
+        self.current = 0
+        self.tail = 0
+
+        self.buffer = [None for _ in range(len(self.buffer))]
+        
