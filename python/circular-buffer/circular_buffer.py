@@ -66,7 +66,24 @@ class CircularBuffer:
 
 
     def overwrite(self, data):
-        pass
+        """
+        Overwrites the data.
+        """
+        if self.current == len(self.buffer):
+            self.tail = self.head
+            self.buffer[self.tail] = data
+
+            if self.head + 1 == len(self.buffer):
+                self.head = 0
+            else:
+                self.head += 1
+        else:
+            self.buffer[self.tail] = data
+            self.tail += 1
+            self.current += 1      
+            
+            if self.tail == len(self.buffer):
+                self.tail = 0
 
     def clear(self):
         """
