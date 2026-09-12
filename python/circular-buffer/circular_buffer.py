@@ -27,7 +27,26 @@ class CircularBuffer:
         self.current = 0
 
     def read(self):
-        pass
+        """
+        Reads the element from the buffer.
+        """
+
+        if self.current == 0:
+            raise BufferEmptyException("Circular buffer is empty")
+
+        current_element = self.buffer[self.head]
+        self.buffer[self.head] = None
+        self.head += 1
+        self.current -= 1
+
+        if self.head == len(self.buffer):
+            self.head = 0
+            
+        if self.current == 0:
+            self.head = 0
+
+        return current_element
+
 
     def write(self, data):
         pass
