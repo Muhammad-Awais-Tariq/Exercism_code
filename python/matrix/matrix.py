@@ -28,3 +28,10 @@ class Matrix:
         Return:
             list: The column based on the index.
         """        
+
+        required_column = []
+
+        for row in range(len(self.final_row)):
+            required_column.append(self.final_row[row][index-1])
+
+        return required_column
