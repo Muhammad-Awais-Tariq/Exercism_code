@@ -20,4 +20,11 @@ class Matrix:
         return self.final_row[index-1]
 
     def column(self, index):
-        pass
+        """Return the column of the matrix based on the index.
+
+        Parameters:
+            index (int): The column index that we want.
+        
+        Return:
+            list: The column based on the index.
+        """        
