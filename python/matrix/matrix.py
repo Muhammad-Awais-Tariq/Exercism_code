@@ -8,7 +8,15 @@ class Matrix:
             self.final_row.append(current_row)
         
     def row(self, index):
-        pass
+        """Return the row of the matrix based on the index.
 
+        Parameters:
+            index (int): The row index that we want.
+        
+        Return:
+            list: The row based on the index.
+        """
+
+        
     def column(self, index):
         pass
