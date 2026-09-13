@@ -17,6 +17,7 @@ class Matrix:
             list: The row based on the index.
         """
 
-        
+        return self.final_row[index-1]
+
     def column(self, index):
         pass
