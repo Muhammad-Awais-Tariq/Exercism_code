@@ -1,37 +1,46 @@
 class Matrix:
+    """Represent a matrix of integers."""
+
     def __init__(self, matrix_string):
-        self.final_row = []
+        """Initialize the matrix from a string representation.
+
+        Parameters:
+            matrix_string (str): A string containing rows of space-separated
+                integers, with rows separated by newlines.
+        """
+        self.rows = []
+
         for row in matrix_string.split("\n"):
             current_row = []
+
             for element in row.split(" "):
-                    current_row.append(int(element))
-            self.final_row.append(current_row)
-        
+                current_row.append(int(element))
+
+            self.rows.append(current_row)
+
     def row(self, index):
-        """Return the row of the matrix based on the index.
+        """Return a row from the matrix.
 
         Parameters:
-            index (int): The row index that we want.
-        
-        Return:
-            list: The row based on the index.
-        """
+            index (int): The 1-based index of the requested row.
 
-        return self.final_row[index-1]
+        Returns:
+            list: The requested row of integers.
+        """
+        return self.rows[index - 1]
 
     def column(self, index):
-        """Return the column of the matrix based on the index.
+        """Return a column from the matrix.
 
         Parameters:
-            index (int): The column index that we want.
-        
-        Return:
-            list: The column based on the index.
-        """        
+            index (int): The 1-based index of the requested column.
 
+        Returns:
+            list: The requested column of integers.
+        """
         required_column = []
 
-        for row in range(len(self.final_row)):
-            required_column.append(self.final_row[row][index-1])
+        for row in self.rows:
+            required_column.append(row[index - 1])
 
         return required_column
