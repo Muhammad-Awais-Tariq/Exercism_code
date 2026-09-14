@@ -9,4 +9,9 @@ class HighScores:
 
         self.scores = scores
 
-    
+    def latest(self):
+        """Reutrn the latest scores.
+
+        Returns:
+            int: The latest score.
+        """
