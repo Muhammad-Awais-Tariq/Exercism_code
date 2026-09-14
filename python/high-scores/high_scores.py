@@ -27,3 +27,10 @@ class HighScores:
         """
 
         return max(self.scores)
+
+    def personal_top_three(self):
+        """Returns the top 3 scores.
+
+        Returns:
+            list : The top 3 scores.
+        """
