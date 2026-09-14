@@ -25,3 +25,5 @@ class HighScores:
             int : The best score
         
         """
+
+        return max(self.scores)
