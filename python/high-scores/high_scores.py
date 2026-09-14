@@ -17,3 +17,11 @@ class HighScores:
         """
 
         return self.scores[-1]
+
+    def personal_best(self):
+        """Return the personal best score.
+
+        Returns:
+            int : The best score
+        
+        """
