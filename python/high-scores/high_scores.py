@@ -1,38 +1,38 @@
 class HighScores:
-    """ Contains the high scores of the tests."""
+    """Manage a player's high scores."""
+
     def __init__(self, scores):
-        """Constructor of the scores.
+        """Initialize a HighScores object with the given scores.
 
         Parameters:
-            scores (list): All the test scores.
+            scores (list): The player's list of scores.
         """
 
         self.scores = scores
 
     def latest(self):
-        """Reutrn the latest scores.
+        """Return the player's latest score.
 
         Returns:
-            int: The latest score.
+            int: The latest score in the list.
         """
 
         return self.scores[-1]
 
     def personal_best(self):
-        """Return the personal best score.
+        """Return the player's highest score.
 
         Returns:
-            int : The best score
-        
+            int: The highest score in the list.
         """
 
         return max(self.scores)
 
     def personal_top_three(self):
-        """Returns the top 3 scores.
+        """Return the player's three highest scores.
 
         Returns:
-            list : The top 3 scores.
+            list: The three highest scores, ordered from highest to lowest.
         """
-
-        return sorted(self.scores ,reverse=True)[:3]
+        
+        return sorted(self.scores, reverse=True)[:3]
