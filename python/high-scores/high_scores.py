@@ -34,3 +34,5 @@ class HighScores:
         Returns:
             list : The top 3 scores.
         """
+
+        return sorted(self.scores ,reverse=True)[:3]
