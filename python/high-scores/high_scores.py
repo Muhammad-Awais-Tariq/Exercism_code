@@ -15,3 +15,5 @@ class HighScores:
         Returns:
             int: The latest score.
         """
+
+        return self.scores[-1]
