@@ -7,4 +7,6 @@ class HighScores:
             scores (list): All the test scores.
         """
 
-        
+        self.scores = scores
+
+    
