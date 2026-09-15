@@ -1,23 +1,43 @@
 class Garden:
-    def __init__(self, diagram, students=["Alice", "Bob", "Charlie", "David", "Eve", "Fred", "Ginny", "Harriet", "Ileana", "Joseph", "Kincaid", "Larry"]):
-        """Constructor to intilize the digram and students.
+    """Represent a kindergarten garden and its assigned plants."""
+
+    def __init__(
+        self,
+        diagram,
+        students=[
+            "Alice",
+            "Bob",
+            "Charlie",
+            "David",
+            "Eve",
+            "Fred",
+            "Ginny",
+            "Harriet",
+            "Ileana",
+            "Joseph",
+            "Kincaid",
+            "Larry",
+        ],
+    ):
+        """Initialize the garden with a diagram and student roster.
 
         Parameters:
-            digram (str): The plants digram.
-            students (list): The students names.
+            diagram (str): The two-row garden diagram.
+            students (list): The names of the students.
         """
-
         self.diagram = diagram
         self.students = sorted(students)
-        self.digram_rows = diagram.split("\n")
+        self.diagram_rows = diagram.split("\n")
 
-    def plants(self , student):
-        """Determines the plant for the student based on the index.
+    def plants(self, student):
+        """Return the four plants assigned to a student.
 
         Parameters:
-            student (str): the student name
-        """
+            student (str): The name of the student.
 
+        Returns:
+            list: The four plant names assigned to the student.
+        """
         plant_names = {
             "G": "Grass",
             "C": "Clover",
@@ -29,13 +49,17 @@ class Garden:
 
         required_index = self.students.index(student) * 2
 
-        plants.append(self.digram_rows[0][required_index:required_index+2])
-        plants.append(self.digram_rows[1][required_index:required_index+2])
+        plants.append(
+            self.diagram_rows[0][required_index : required_index + 2]
+        )
+        plants.append(
+            self.diagram_rows[1][required_index : required_index + 2]
+        )
 
-        final_ans = []
+        final_answer = []
 
         for plant in plants:
-            for plan in plant:
-                final_ans.append(plant_names[plan])
+            for plant_code in plant:
+                final_answer.append(plant_names[plant_code])
 
-        return final_ans
+        return final_answer
