@@ -1,32 +1,20 @@
 class Garden:
     """Represent a kindergarten garden and its assigned plants."""
 
-    def __init__(
-        self,
-        diagram,
-        students=[
-            "Alice",
-            "Bob",
-            "Charlie",
-            "David",
-            "Eve",
-            "Fred",
-            "Ginny",
-            "Harriet",
-            "Ileana",
-            "Joseph",
-            "Kincaid",
-            "Larry",
-        ],
-    ):
+    def __init__(self, diagram, students = None):
+
         """Initialize the garden with a diagram and student roster.
 
         Parameters:
             diagram (str): The two-row garden diagram.
             students (list): The names of the students.
         """
+
         self.diagram = diagram
-        self.students = sorted(students)
+        if students is not None:
+            self.students = sorted(students)
+        else:
+            self.students = ["Alice","Bob","Charlie","David","Eve","Fred","Ginny","Harriet","Ileana","Joseph","Kincaid","Larry"]
         self.diagram_rows = diagram.split("\n")
 
     def plants(self, student):
