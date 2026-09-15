@@ -8,10 +8,10 @@ class Garden:
         """
 
         self.diagram = diagram
-        self.students = students
+        self.students = sorted(students)
         self.digram_rows = diagram.split("\n")
 
-    def plant(self , student):
+    def plants(self , student):
         """Determines the plant for the student based on the index.
 
         Parameters:
