@@ -10,3 +10,10 @@ class Garden:
         self.diagram = diagram
         self.students = students
         self.digram_rows = diagram.split("\n")
+
+    def plant(self , student):
+        """Determines the plant for the student based on the index.
+
+        Parameters:
+            student (str): the student name
+        """
