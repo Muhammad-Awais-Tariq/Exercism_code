@@ -1,9 +1,12 @@
 def recite(start, take=1):
-    """Recite the verses based on the start index.
+    """Recite the requested verses of the bottle song.
 
     Parameters:
-        start (int): The start index to start the verse from.
-        take (int): How many verses we want.
+        start (int): The number of bottles to start the song with.
+        take (int): The number of verses to recite.
+
+    Returns:
+        list: The requested verses as a list of strings.
     """
 
     number_words = {
@@ -22,16 +25,18 @@ def recite(start, take=1):
 
     verses = []
     current = 0
-    for i in range(start , 0 , -1):
+
+    for i in range(start, 0, -1):
         bottle = "bottle" if i == 1 else "bottles"
         next_bottle = "bottle" if i - 1 == 1 else "bottles"
+
         verses.extend([
             f"{number_words[i]} green {bottle} hanging on the wall,",
             f"{number_words[i]} green {bottle} hanging on the wall,",
             "And if one green bottle should accidentally fall,",
-            f"There'll be {number_words[i - 1].lower()} green {next_bottle} hanging on the wall.",
+            f"There'll be {number_words[i - 1].lower()} green "
+            f"{next_bottle} hanging on the wall.",
         ])
-        
 
         current += 1
 
@@ -39,6 +44,6 @@ def recite(start, take=1):
             break
 
         if i != 1:
-            verses.append("")        
+            verses.append("")
 
     return verses
