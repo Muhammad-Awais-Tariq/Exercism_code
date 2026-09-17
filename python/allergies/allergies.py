@@ -26,7 +26,10 @@ class Allergies:
             item (str): The item that we are checking.
         """
 
-
+        if self.score & self.mapping[item] == self.mapping[item]:
+            return True
+        else:
+            return False
 
     @property
     def lst(self):
