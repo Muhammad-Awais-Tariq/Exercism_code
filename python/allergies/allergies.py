@@ -34,3 +34,11 @@ class Allergies:
     @property
     def lst(self):
         """returns the list of all the alergies."""
+
+        current_allergies = []
+
+        for key in self.mapping.keys():
+            if self.score & self.mapping[key]  == self.mapping[key] :
+                current_allergies.append(key)
+
+        return current_allergies
