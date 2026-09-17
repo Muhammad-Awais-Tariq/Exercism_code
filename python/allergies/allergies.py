@@ -1,10 +1,11 @@
 class Allergies:
+    """Represent a person's allergy score and allergies."""
 
     def __init__(self, score):
-        """Stores the score.
+        """Initialize the allergy score.
 
         Parameters:
-            scores (int): The score that we need.
+            score (int): The person's allergy score.
         """
 
         self.score = score
@@ -20,25 +21,26 @@ class Allergies:
         }
 
     def allergic_to(self, item):
-        """Checks if the value is present of item or not.
+        """Check whether the person is allergic to an item.
 
         Parameters:
-            item (str): The item that we are checking.
+            item (str): The allergy item to check.
+
+        Returns:
+            bool: True if the person is allergic to the item,
+                otherwise False.
         """
 
-        if self.score & self.mapping[item] == self.mapping[item]:
-            return True
-        else:
-            return False
+        return self.score & self.mapping[item] == self.mapping[item]
 
     @property
     def lst(self):
-        """returns the list of all the alergies."""
+        """Return a list of all allergies."""
 
         current_allergies = []
 
-        for key in self.mapping.keys():
-            if self.score & self.mapping[key]  == self.mapping[key] :
-                current_allergies.append(key)
+        for item in self.mapping:
+            if self.score & self.mapping[item] == self.mapping[item]:
+                current_allergies.append(item)
 
         return current_allergies
