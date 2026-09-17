@@ -7,7 +7,7 @@ class Allergies:
             scores (int): The score that we need.
         """
 
-        
+        self.score = score
 
     def allergic_to(self, item):
         pass
