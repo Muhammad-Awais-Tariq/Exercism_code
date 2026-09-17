@@ -18,9 +18,15 @@ class Allergies:
             "pollen": 64,
             "cats": 128,
         }
-        
+
     def allergic_to(self, item):
-        pass
+        """Checks if the value is present of item or not.
+
+        Parameters:
+            item (str): The item that we are checking.
+        """
+
+
 
     @property
     def lst(self):
