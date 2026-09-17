@@ -33,4 +33,4 @@ class Allergies:
 
     @property
     def lst(self):
-        pass
+        """returns the list of all the alergies."""
