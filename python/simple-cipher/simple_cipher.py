@@ -41,3 +41,15 @@ class Cipher:
             text (str): The text that we want to encode
         
         """
+
+        new_text = ""
+
+        for index, char in enumerate(text):
+            key_char = self.key[index % len(self.key)]
+
+            shift = ord(key_char) - ord("a")
+            new_char = (ord(char) - ord("a") - shift) % 26
+
+            new_text += chr(new_char + ord("a"))
+
+        return new_text
