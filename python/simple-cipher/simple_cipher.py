@@ -20,16 +20,19 @@ class Cipher:
         Parameters:
             text (str): The text that we want to encode
         """
+        
+        new_text = ""
 
-        shift = ord(self.key) - ord("a")
+        for index, char in enumerate(text):
+            key_char = self.key[index % len(self.key)]
 
-        new_txt = ""
-
-        for char in text:
+            shift = ord(key_char) - ord("a")
             new_char = (ord(char) - ord("a") + shift) % 26
-            new_txt += chr(new_char + ord("a"))
 
-        return new_txt
+            new_text += chr(new_char + ord("a"))
+
+        return new_text
+
 
     def decode(self, text):
         pass
