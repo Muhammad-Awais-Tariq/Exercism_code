@@ -20,7 +20,7 @@ class Cipher:
         Parameters:
             text (str): The text that we want to encode
         """
-        
+
         new_text = ""
 
         for index, char in enumerate(text):
@@ -35,4 +35,9 @@ class Cipher:
 
 
     def decode(self, text):
-        pass
+        """Decode the string based on the key.
+
+        Parameters:
+            text (str): The text that we want to encode
+        
+        """
