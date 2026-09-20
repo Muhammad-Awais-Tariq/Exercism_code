@@ -10,9 +10,25 @@ def answer(question):
 
     question_split = question.replace(" by" , "").split(" ")
     question_split[-1] = question_split[-1].replace("?" , "")
-    operands = list(map(int, question_split[2::2]))
+    try:
+        operands = list(map(int, question_split[2::2]))
+    except ValueError:
+        raise ValueError("syntax error")
+    
     operators = question_split[3::2]
+    if len(operands) < 1:
+        raise ValueError("syntax error")
+    
     total = operands[0]
+
+    for operator in operators:
+        if operator.isnumeric():
+            raise ValueError("syntax error")
+        if operator not in ["plus" , "minus" , "multiplied" , "divided"]:
+            raise ValueError("unknown operation")
+
+    if len(operands) != len(operators) + 1:
+        raise ValueError("syntax error")
 
     for i in range(len(operands)-1):
         operator = operators[i]
@@ -29,5 +45,3 @@ def answer(question):
             total = int(division)
 
     return total
-
-print(answer("What is 5 plus 13 plus 6?"))
