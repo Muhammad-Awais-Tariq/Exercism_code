@@ -1,3 +1,6 @@
+import string
+import math
+
 def cipher_text(plain_text):
     """Cipher the text from the plain to the ciphered.
 
@@ -7,3 +10,6 @@ def cipher_text(plain_text):
     Returns:
         str: The chipered text.
     """
+
+    clean_text = plain_text.translate(str.maketrans('', '', string.punctuation))
+    clean_text = clean_text.replace(" " , "").lower()
