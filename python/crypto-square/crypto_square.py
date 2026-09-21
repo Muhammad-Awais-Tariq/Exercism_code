@@ -13,3 +13,7 @@ def cipher_text(plain_text):
 
     clean_text = plain_text.translate(str.maketrans('', '', string.punctuation))
     clean_text = clean_text.replace(" " , "").lower()
+
+    columns = math.ceil(math.sqrt(len(clean_text)))
+
+    rows = math.ceil(len(clean_text) / columns)
