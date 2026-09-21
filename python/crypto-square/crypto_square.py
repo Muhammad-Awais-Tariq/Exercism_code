@@ -1,25 +1,25 @@
-import string
 import math
+import string
 
 def cipher_text(plain_text):
-    """Cipher the text from the plain to the ciphered.
+    """Encrypt plain text using the Crypto Square method.
 
     Parameters:
-        plain_text (str): The plain text to be ciphered.
-    
+        plain_text (str): The plain text to be encrypted.
+
     Returns:
-        str: The chipered text.
+        str: The encrypted text.
     """
 
-    
-    clean_text = plain_text.translate(str.maketrans('', '', string.punctuation))
-    clean_text = clean_text.replace(" " , "").lower()
+    clean_text = plain_text.translate(
+        str.maketrans("", "", string.punctuation)
+    )
+    clean_text = clean_text.replace(" ", "").lower()
 
     if not clean_text:
         return ""
-    
-    columns = math.ceil(math.sqrt(len(clean_text)))
 
+    columns = math.ceil(math.sqrt(len(clean_text)))
     rows = math.ceil(len(clean_text) / columns)
 
     result = ""
@@ -27,11 +27,12 @@ def cipher_text(plain_text):
     for i in range(columns):
         for j in range(rows):
             index = j * columns + i
+
             try:
                 result += clean_text[index]
             except IndexError:
                 result += " "
-                
+
         if i < columns - 1:
             result += " "
 
