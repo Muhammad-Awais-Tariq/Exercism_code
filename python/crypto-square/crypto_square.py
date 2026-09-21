@@ -31,6 +31,8 @@ def cipher_text(plain_text):
                 result += clean_text[index]
             except IndexError:
                 result += " "
-        result += " "
+                
+        if i < columns - 1:
+            result += " "
 
     return result
