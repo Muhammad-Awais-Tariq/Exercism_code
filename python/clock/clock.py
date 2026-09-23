@@ -10,8 +10,9 @@ class Clock:
             minute (int): The minutes on the clock.
         """
 
-        self.hour = hour
-        self.minute = minute
+        total_minutes = hour * 60 + minute
+        self.hour = (total_minutes // 60 ) % 24
+        self.minute = total_minutes % 60
 
     def __repr__(self):
         """Returns the representation of the class.
@@ -29,6 +30,8 @@ class Clock:
             str: The str representation of the object.
 
         """
+
+        return f"{self.hour:02d}:{self.minute:02d}"
 
     def __eq__(self, other):
         pass
