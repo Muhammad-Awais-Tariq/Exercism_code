@@ -20,6 +20,8 @@ class Clock:
             str: The object of the class.
         """
 
+        return f"Clock({self.hour}, {self.minute})"
+    
     def __str__(self):
         pass
 
