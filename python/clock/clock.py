@@ -34,7 +34,14 @@ class Clock:
         return f"{self.hour:02d}:{self.minute:02d}"
 
     def __eq__(self, other):
-        pass
+        """Compares the current clock with the other.
+
+        Parameters:
+            other (obj): the object we want to compare the current clock to.
+        
+        Returns:
+            bool: Returns true if both clock are equal else false.
+        """
 
     def __add__(self, minutes):
         """Adds the minutes to current minutes.
