@@ -1,72 +1,65 @@
 class Clock:
-    """
-    A clock class for handling all the clock related functionality.
-    """
+    """Represent a 24-hour clock."""
+
     def __init__(self, hour, minute):
-        """Construtor to intialize hours and minutes.
+        """Initialize the clock with the given hour and minute.
 
         Parameters:
-            hour (int): The hours of the time.
-            minute (int): The minutes on the clock.
+            hour (int): The hour of the clock.
+            minute (int): The minute of the clock.
         """
-
         total_minutes = hour * 60 + minute
-        self.hour = (total_minutes // 60 ) % 24
+
+        self.hour = (total_minutes // 60) % 24
         self.minute = total_minutes % 60
 
     def __repr__(self):
-        """Returns the representation of the class.
+        """Return the official string representation of the clock.
 
         Returns:
-            str: The object of the class.
+            str: The clock representation in the format 'Clock(hour, minute)'.
         """
-
         return f"Clock({self.hour}, {self.minute})"
-    
+
     def __str__(self):
-        """Gives the string representation of class.
+        """Return the clock time in a human-readable format.
 
         Returns:
-            str: The str representation of the object.
-
+            str: The clock time in the format 'HH:MM'.
         """
-
         return f"{self.hour:02d}:{self.minute:02d}"
 
     def __eq__(self, other):
-        """Compares the current clock with the other.
+        """Compare this clock with another clock.
 
         Parameters:
-            other (obj): the object we want to compare the current clock to.
-        
-        Returns:
-            bool: Returns true if both clock are equal else false.
-        """
+            other (Clock): The clock to compare with.
 
-        return self.minute == other.minute and self.hour == other.hour
+        Returns:
+            bool: True if both clocks represent the same time, otherwise False.
+        """
+        return self.hour == other.hour and self.minute == other.minute
 
     def __add__(self, minutes):
-        """Adds the minutes to current minutes.
+        """Return a new clock with minutes added.
 
         Parameters:
-            minutes (int): Add the minutes.
-        
-        Returns:
-            obj: The new clock with the added minutes.
-        """
+            minutes (int): The number of minutes to add.
 
+        Returns:
+            Clock: A new clock with the added minutes.
+        """
         new_minutes = self.minute + minutes
-        return Clock(self.hour , new_minutes)
+        return Clock(self.hour, new_minutes)
 
     def __sub__(self, minutes):
-        """Subtracts the minutes from the current minutes.
+        """Return a new clock with minutes subtracted.
 
         Parameters:
-            minutes (int): subtract the minutes.
+            minutes (int): The number of minutes to subtract.
 
         Returns:
-            obj: The new clock with the subtracted minutes.            
-        """  
-
+            Clock: A new clock with the subtracted minutes.
+        """
         new_minutes = self.minute - minutes
-        return Clock(self.hour , new_minutes)      
+        return Clock(self.hour, new_minutes)
