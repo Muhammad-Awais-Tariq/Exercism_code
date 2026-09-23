@@ -43,6 +43,8 @@ class Clock:
             bool: Returns true if both clock are equal else false.
         """
 
+        return self.minute == other.minute and self.hour == other.hour
+
     def __add__(self, minutes):
         """Adds the minutes to current minutes.
 
