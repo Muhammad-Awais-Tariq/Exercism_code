@@ -41,6 +41,9 @@ class Clock:
 
         Parameters:
             minutes (int): Add the minutes.
+        
+        Returns:
+            obj: The new clock with the added minutes.
         """
 
         new_minutes = self.minute + minutes
@@ -51,6 +54,9 @@ class Clock:
 
         Parameters:
             minutes (int): subtract the minutes.
+
+        Returns:
+            obj: The new clock with the subtracted minutes.            
         """  
 
         new_minutes = self.minute - minutes
