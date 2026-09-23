@@ -12,9 +12,13 @@ class Clock:
 
         self.hour = hour
         self.minute = minute
-        
+
     def __repr__(self):
-        pass
+        """Returns the representation of the class.
+
+        Returns:
+            str: The object of the class.
+        """
 
     def __str__(self):
         pass
