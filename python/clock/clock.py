@@ -37,7 +37,11 @@ class Clock:
         pass
 
     def __add__(self, minutes):
-        pass
+        """Adds the minutes to current minutes.
+
+        Parameters:
+            minutes (int): Add the minutes.
+        """
 
     def __sub__(self, minutes):
         pass
