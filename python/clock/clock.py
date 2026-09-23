@@ -23,7 +23,12 @@ class Clock:
         return f"Clock({self.hour}, {self.minute})"
     
     def __str__(self):
-        pass
+        """Gives the string representation of class.
+
+        Returns:
+            str: The str representation of the object.
+
+        """
 
     def __eq__(self, other):
         pass
