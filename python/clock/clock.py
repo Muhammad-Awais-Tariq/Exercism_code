@@ -51,4 +51,7 @@ class Clock:
 
         Parameters:
             minutes (int): subtract the minutes.
-        """        
+        """  
+
+        new_minutes = self.minute - minutes
+        return Clock(self.hour , new_minutes)      
