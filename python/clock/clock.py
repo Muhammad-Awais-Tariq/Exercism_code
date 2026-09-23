@@ -43,5 +43,8 @@ class Clock:
             minutes (int): Add the minutes.
         """
 
+        new_minutes = self.minute + minutes
+        return Clock(self.hour , new_minutes)
+
     def __sub__(self, minutes):
         pass
