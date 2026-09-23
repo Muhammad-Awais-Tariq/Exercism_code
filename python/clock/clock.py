@@ -9,6 +9,9 @@ class Clock:
             hour (int): The hours of the time.
             minute (int): The minutes on the clock.
         """
+
+        self.hour = hour
+        self.minute = minute
         
     def __repr__(self):
         pass
