@@ -47,4 +47,8 @@ class Clock:
         return Clock(self.hour , new_minutes)
 
     def __sub__(self, minutes):
-        pass
+        """Subtracts the minutes from the current minutes.
+
+        Parameters:
+            minutes (int): subtract the minutes.
+        """        
