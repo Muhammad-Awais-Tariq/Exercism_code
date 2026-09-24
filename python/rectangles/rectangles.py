@@ -23,18 +23,18 @@ def rectangles(strings):
                                 valid = True
 
                                 for o in range(j + 1, k):
-                                    if strings[i][o] != "-":
+                                    if strings[i][o] not in "-+":
                                         valid = False
 
                                 for p in range(j + 1, k):
-                                    if strings[l][p] != "-":
+                                    if strings[l][p] not in "-+" :
                                         valid = False
 
                                 for q in range(i + 1, l):
-                                    if strings[q][j] != "|":
+                                    if strings[q][j] not in  "|+":
                                         valid = False
 
-                                    if strings[q][k] != "|":
+                                    if strings[q][k] not in  "|+":
                                         valid = False
 
                                 if valid:
