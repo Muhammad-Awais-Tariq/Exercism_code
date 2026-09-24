@@ -1,43 +1,52 @@
 def rectangles(strings):
-    """Tell the number of rectangles based on the ascii characters.
+    """Count the number of complete rectangles in an ASCII diagram.
 
     Parameters:
-        strings(str): The ascii chracters based on which we will check.
-    
+        strings (list[str]): Rows of the ASCII diagram.
+
     Returns:
-        int: The number of the rectangles.
+        int: The total number of complete rectangles.
     """
 
     if len(strings) <= 1:
         return 0
 
-    total_num = 0
+    total_rectangles = 0
 
-    for i in range(len(strings)):
-        for j in range(len(strings[i])):
-            if strings[i][j] == "+":
-                for k in range(j + 1, len(strings[i])):
-                    if strings[i][k] == "+":
-                        for l in range(i + 1, len(strings)):
-                            if strings[l][j] == "+" and strings[l][k] == "+":
+    for top_row in range(len(strings)):
+        for left_column in range(len(strings[top_row])):
+            if strings[top_row][left_column] == "+":
+                for right_column in range(
+                    left_column + 1, len(strings[top_row])
+                ):
+                    if strings[top_row][right_column] == "+":
+                        for bottom_row in range(top_row + 1, len(strings)):
+                            if (
+                                strings[bottom_row][left_column] == "+"
+                                and strings[bottom_row][right_column] == "+"
+                            ):
                                 valid = True
 
-                                for o in range(j + 1, k):
-                                    if strings[i][o] not in "-+":
+                                for column in range(
+                                    left_column + 1, right_column
+                                ):
+                                    if strings[top_row][column] not in "-+":
                                         valid = False
 
-                                for p in range(j + 1, k):
-                                    if strings[l][p] not in "-+" :
+                                for column in range(
+                                    left_column + 1, right_column
+                                ):
+                                    if strings[bottom_row][column] not in "-+":
                                         valid = False
 
-                                for q in range(i + 1, l):
-                                    if strings[q][j] not in  "|+":
+                                for row in range(top_row + 1, bottom_row):
+                                    if strings[row][left_column] not in "|+":
                                         valid = False
 
-                                    if strings[q][k] not in  "|+":
+                                    if strings[row][right_column] not in "|+":
                                         valid = False
 
                                 if valid:
-                                    total_num += 1
+                                    total_rectangles += 1
 
-    return total_num
+    return total_rectangles
