@@ -22,5 +22,15 @@ def rectangles(strings):
                                 pass
                         for l in range(i+1 , len(strings)):
                             if strings[l][j] == "+" and strings[l][k] == "+":
-                                pass
+                                for p in range(j+1 , k):
+                                    if strings[l][p] != "-":
+                                        pass
+
+                                for q in range(i+1 , l):
+                                    if strings[q][j] != "|":
+                                        pass
+
+                                    if strings[q][k] != "|":
+                                        pass
+                                
                 
