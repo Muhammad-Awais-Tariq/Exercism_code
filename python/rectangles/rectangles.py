@@ -11,12 +11,16 @@ def rectangles(strings):
     if len(strings) <= 1:
         return 0
 
+    total_num = 0
     for i in range(len(strings)):
         for j in range(len(strings[i])):
             if strings[i][j] == "+":
                 for k in range(j + 1 , len(strings[i])):
                     if strings[i][k] == "+":
+                        for o in range(j+1 , k ):
+                            if strings[i][o] != "-":
+                                pass
                         for l in range(i+1 , len(strings)):
                             if strings[l][j] == "+" and strings[l][k] == "+":
-                                
+                                pass
                 
