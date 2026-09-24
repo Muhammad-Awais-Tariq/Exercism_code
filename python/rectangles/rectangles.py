@@ -7,3 +7,6 @@ def rectangles(strings):
     Returns:
         int: The number of the rectangles.
     """
+
+    if len(strings) <= 1:
+        return 0
