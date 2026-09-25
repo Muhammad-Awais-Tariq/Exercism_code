@@ -1,61 +1,120 @@
 class EmptyListException(Exception):
-    pass
-
+    """Exception raised when an operation is performed on an empty list."""
 
 class Node:
-    """Represents a single node of the linked list"""
+    """Represent a single node in a singly linked list."""
+
     def __init__(self, value):
-        self.node_value = value
+        """Initialize a node with a value and no next node.
+
+        Parameters:
+            value: The value stored in the node.
+        """
+        self.data = value
         self.next_node = None
 
     def value(self):
-        return self.node_value 
+        """Return the value stored in the node.
+
+        Returns:
+            The value stored in the node.
+        """
+        return self.data
 
     def next(self):
+        """Return the next node in the linked list.
+
+        Returns:
+            Node: The next node, or None if this is the last node.
+        """
         return self.next_node
 
 
 class LinkedList:
+    """Represent a singly linked list."""
+
     def __init__(self, values=None):
-            self.len = 0
-            self.node_head = None
-            if values is not None:
-                for value in values:
-                    self.push(value)
+        """Initialize a linked list with optional values.
+
+        Parameters:
+            values: An optional iterable of values to add to the list.
+        """
+        self.length = 0
+        self.head_node = None
+
+        if values is not None:
+            for value in values:
+                self.push(value)
 
     def __iter__(self):
-        current_node = self.node_head
+        """Iterate over the values in the linked list.
 
-        while current_node != None:
-            yield current_node.node_value
+        Yields:
+            The value stored in each node, starting from the head.
+        """
+        current_node = self.head_node
+
+        while current_node is not None:
+            yield current_node.data
             current_node = current_node.next_node
 
     def __len__(self):
-        return self.len
+        """Return the number of nodes in the linked list.
+
+        Returns:
+            int: The number of nodes in the list.
+        """
+        return self.length
 
     def head(self):
-        if self.len > 0:
-            return self.node_head
-        else:
-            raise EmptyListException("The list is empty.")
+        """Return the first node in the linked list.
+
+        Returns:
+            Node: The head node of the list.
+
+        Raises:
+            EmptyListException: If the list is empty.
+        """
+        if self.length > 0:
+            return self.head_node
+
+        raise EmptyListException("The list is empty.")
 
     def push(self, value):
+        """Add a new value to the beginning of the linked list.
+
+        Parameters:
+            value: The value to add to the list.
+        """
         new_node = Node(value)
-        new_node.next_node = self.node_head
-        self.node_head = new_node
-        self.len += 1
+        new_node.next_node = self.head_node
+        self.head_node = new_node
+        self.length += 1
 
     def pop(self):
-        if self.len <= 0:
+        """Remove and return the first value from the linked list.
+
+        Returns:
+            The value stored in the removed node.
+
+        Raises:
+            EmptyListException: If the list is empty.
+        """
+        if self.length <= 0:
             raise EmptyListException("The list is empty.")
 
-        current_value = self.node_head.node_value
-        self.node_head = self.node_head.next_node
-        self.len -= 1
+        current_value = self.head_node.data
+        self.head_node = self.head_node.next_node
+        self.length -= 1
 
         return current_value
 
     def reversed(self):
+        """Return a new linked list with the values in reverse order.
+
+        Returns:
+            LinkedList: A new linked list containing the values in reverse order.
+        """
         all_values = list(self)
         new_list = LinkedList()
 
