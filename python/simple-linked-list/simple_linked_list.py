@@ -27,7 +27,7 @@ class LinkedList:
         pass
 
     def __len__(self):
-        pass
+        return self.len
 
     def head(self):
         if self.len > 0:
