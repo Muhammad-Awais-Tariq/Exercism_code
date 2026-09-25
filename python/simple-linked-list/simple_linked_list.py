@@ -46,7 +46,14 @@ class LinkedList:
         self.len += 1
 
     def pop(self):
-        pass
+        if self.len <= 0:
+            raise EmptyListException("The list is empty.")
+
+        current_value = self.node_head.node_value
+        self.node_head = self.node_head.next_node
+        self.len -= 1
+
+        return current_value
 
     def reversed(self):
         pass
