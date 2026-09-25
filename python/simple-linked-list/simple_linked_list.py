@@ -30,14 +30,17 @@ class LinkedList:
         pass
 
     def head(self):
-        pass
+        if self.len > 0:
+            return self.node_head
+        else:
+            raise EmptyListException("The list is empty.")
 
     def push(self, value):
         new_node = Node(value)
         new_node.next_node = self.node_head
         self.node_head = new_node
         self.len += 1
-        
+
     def pop(self):
         pass
 
