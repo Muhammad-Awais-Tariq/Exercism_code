@@ -17,7 +17,11 @@ class Node:
 
 class LinkedList:
     def __init__(self, values=None):
-        pass
+            self.len = 0
+            self.node_head = None
+            if values is not None:
+                for value in values:
+                    self.push(value)
 
     def __iter__(self):
         pass
