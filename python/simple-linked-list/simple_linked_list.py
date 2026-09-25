@@ -5,13 +5,14 @@ class EmptyListException(Exception):
 class Node:
     """Represents a single node of the linked list"""
     def __init__(self, value):
-        pass
+        self.node_value = value
+        self.next_node = None
 
     def value(self):
-        pass
+        return self.node_value 
 
     def next(self):
-        pass
+        return self.next_node
 
 
 class LinkedList:
