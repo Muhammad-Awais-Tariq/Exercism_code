@@ -24,7 +24,11 @@ class LinkedList:
                     self.push(value)
 
     def __iter__(self):
-        pass
+        current_node = self.node_head
+
+        while current_node != None:
+            yield current_node.node_value
+            current_node = current_node.next_node
 
     def __len__(self):
         return self.len
