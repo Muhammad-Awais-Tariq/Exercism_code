@@ -33,8 +33,11 @@ class LinkedList:
         pass
 
     def push(self, value):
-        pass
-
+        new_node = Node(value)
+        new_node.next_node = self.node_head
+        self.node_head = new_node
+        self.len += 1
+        
     def pop(self):
         pass
 
