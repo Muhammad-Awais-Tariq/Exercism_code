@@ -3,6 +3,7 @@ class EmptyListException(Exception):
 
 
 class Node:
+    """Represents a single node of the linked list"""
     def __init__(self, value):
         pass
 
