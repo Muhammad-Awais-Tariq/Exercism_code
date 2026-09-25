@@ -56,4 +56,10 @@ class LinkedList:
         return current_value
 
     def reversed(self):
-        pass
+        all_values = list(self)
+        new_list = LinkedList()
+
+        for value in all_values:
+            new_list.push(value)
+
+        return new_list
