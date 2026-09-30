@@ -42,7 +42,7 @@ Some of the exercises solved so far (see the repo for the full, growing list):
 - Ellen's Alien Game
 - ETL
 - Lasagna
-
+- Tree Building
 ---
 
 ## Why
