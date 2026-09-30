@@ -19,9 +19,9 @@ def BuildTree(records):
     ordered_id = [i.record_id for i in records]
     if records:
         if ordered_id[-1] != len(ordered_id) - 1:
-            raise ValueError('broken tree')
+            raise ValueError('Record id is invalid or out of order.')
         if ordered_id[0] != 0:
-            raise ValueError('invalid')
+            raise ValueError('Record id is invalid or out of order.')
     trees = []
     parent = {}
     for i in range(len(ordered_id)):
