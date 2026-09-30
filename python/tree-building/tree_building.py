@@ -29,12 +29,12 @@ def BuildTree(records):
             if ordered_id[i] == j.record_id:
                 if j.record_id == 0:
                     if j.parent_id != 0:
-                        raise ValueError('error!')
+                        raise ValueError('Node parent_id should be smaller than its record_id.')
                 if j.record_id < j.parent_id:
-                    raise ValueError('something went wrong!')
+                    raise ValueError('Node parent_id should be smaller than its record_id.')
                 if j.record_id == j.parent_id:
                     if j.record_id != 0:
-                        raise ValueError('error!')
+                        raise ValueError('Node parent_id should be smaller than its record_id.')
                 trees.append(Node(ordered_id[i]))
     for i in range(len(ordered_id)):
         for j in trees:
